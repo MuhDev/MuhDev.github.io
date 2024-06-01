@@ -1,6 +1,4 @@
-((a,b,c)=>{a[b]=a[b]||{}
-a[b][c]=a[b][c]||[]
-a[b][c].push({p:"main.dart.js_2",e:"beginPart"})})(self,"$__dart_deferred_initializers__","eventLog")
+self.$__dart_deferred_initializers__=self.$__dart_deferred_initializers__||Object.create(null)
 $__dart_deferred_initializers__.current=function(a,b,c,$){var C={
 at_(d){var x=0,w=A.a9(y.a),v,u,t,s,r
 var $async$at_=A.aa(function(e,f){if(e===1)return A.a6(f,w)
