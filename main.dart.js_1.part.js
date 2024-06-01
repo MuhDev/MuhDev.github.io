@@ -1,4 +1,6 @@
-self.$__dart_deferred_initializers__=self.$__dart_deferred_initializers__||Object.create(null)
+((a,b,c)=>{a[b]=a[b]||{}
+a[b][c]=a[b][c]||[]
+a[b][c].push({p:"main.dart.js_1",e:"beginPart"})})(self,"$__dart_deferred_initializers__","eventLog")
 $__dart_deferred_initializers__.current=function(a,b,c,$){var B={
 aIf(d,e){return new B.wJ(d,!0,null)},
 wI:function wI(){},

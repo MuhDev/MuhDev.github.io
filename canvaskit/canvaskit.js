@@ -3,8 +3,7 @@ var CanvasKitInit = (() => {
   var _scriptDir = typeof document !== 'undefined' && document.currentScript ? document.currentScript.src : undefined;
   if (typeof __filename !== 'undefined') _scriptDir = _scriptDir || __filename;
   return (
-function(CanvasKitInit) {
-  CanvasKitInit = CanvasKitInit || {};
+function(CanvasKitInit = {})  {
 
 
 null;var w;w||(w=typeof CanvasKitInit !== 'undefined' ? CanvasKitInit : {});var aa,ea;w.ready=new Promise(function(a,b){aa=a;ea=b});
@@ -276,6 +275,7 @@ w.run=ve;if(w.preInit)for("function"==typeof w.preInit&&(w.preInit=[w.preInit]);
 
   return CanvasKitInit.ready
 }
+
 );
 })();
 if (typeof exports === 'object' && typeof module === 'object')
