@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -15,10 +16,25 @@
     the `--base-href` argument provided to `flutter build`.
   -->
   <!-- <base href="/"> -->
+  <style>
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      /* Default Axis is X*/
+      justify-content: center;
+      /* Main Axis */
+      align-items: center;
+      /* Cross Axis */
+    }
 
+    .indicator {
+      width: 50vw;
+    }
+  </style>
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="My Portofolio in 2022">
+  <meta name="description" content="My Portofolio in 2023">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -27,32 +43,43 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <title>MuhDev | Portofolio</title>
   <link rel="manifest" href="manifest.json">
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = '4246236428';
+    var serviceWorkerVersion = '596625012';
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
+  <script type="text/javascript">
+    window.flutterWebRenderer = "html";
+  </script>
 </head>
+
 <body>
+  <div id="loading_indicator" class="container">
+    <creattie-embed delay="1" speed="100" frame_rate="60" trigger="loop" style="width: 100vw; height: 100vh;"
+      src="assets/Animation - 1702745357149.json"></crettie-embed>
+  </div>
+  <script src="https://creattie.com/js/embed.js?id=08b3e61ac64a0022fdda" defer></script>
+
   <script>
-    window.addEventListener('load', function(ev) {
+    window.addEventListener('load', function (ev) {
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({
         serviceWorker: {
           serviceWorkerVersion: serviceWorkerVersion,
         }
-      }).then(function(engineInitializer) {
+      }).then(function (engineInitializer) {
         return engineInitializer.initializeEngine();
-      }).then(function(appRunner) {
+      }).then(function (appRunner) {
         return appRunner.runApp();
       });
     });
   </script>
 </body>
+
 </html>
