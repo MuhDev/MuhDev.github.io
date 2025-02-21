@@ -1,0 +1,96 @@
+.project-dialog {
+    border: none;
+    border-radius: 8px;
+    background: #202f61;
+    color: white;
+    padding: 0;
+}
+
+.project-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.dialog-content {
+    padding: 2rem;
+}
+
+.dialog-content img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.dialog-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.dialog-text p {
+    color: #9ca3af;
+    line-height: 1.6;
+}
+
+.project-dialog.mobile {
+    width: 90%;
+    margin: 1rem;
+}
+
+.project-dialog.tablet {
+    width: 80%;
+    margin: 5%;
+}
+
+.project-dialog.desktop {
+    width: 70%;
+    margin: 10%;
+}
+
+.project-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.project-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.dialog-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+}
+
+.app-images-carousel {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 1rem 0;
+    margin: 1rem -1rem;
+    scroll-snap-type: x mandatory;
+}
+
+.app-images-carousel img {
+    display: inline-block;
+    width: 300px;
+    height: auto;
+    margin-right: 1rem;
+    scroll-snap-align: start;
+}
+
+.dialog-header .project-logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    background: white;
+    padding: 8px;
+}

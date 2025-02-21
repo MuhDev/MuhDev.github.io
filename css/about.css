@@ -1,0 +1,187 @@
+.about {
+    padding: 100px 0 50px;
+    text-align: right;
+}
+
+.about .container {
+    padding: 0; /* Remove container padding to align with hero section */
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 0; /* Changed from 80px to match hero section */
+}
+
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.achievement-card {
+    background: #202f61;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.achievement-card:hover {
+    background: transparent;
+    border: 1px solid #4a90e2;
+}
+
+.achievement-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+    fill: #4a90e2;
+    filter: invert(53%) sepia(75%) saturate(638%) hue-rotate(182deg) brightness(95%) contrast(91%);
+}
+
+.achievement-card h3 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.achievement-card p {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.about-text {
+    color: #fff;
+    margin: 30px 0;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+.highlight {
+    color: #4a90e2;
+}
+
+.technologies h3 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.tech-item {
+    color: #fff;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tech-item .fas {
+    color: #4a90e2;
+    font-size: 0.9em;
+}
+
+.tech-item::before {
+    content: none;
+}
+
+.about-image {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Changed from 400px to 100% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    position: relative;
+    width: 100%;    /* Changed from 300px to 100% */
+    height: 100%;   /* Changed from 300px to 100% */
+    max-width: 300px; /* Added max-width */
+    max-height: 300px; /* Added max-height */
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.image-border {
+    position: absolute;
+    width: 100%;    /* Changed from 300px to 100% */
+    height: 100%;   /* Changed from 300px to 100% */
+    max-width: 300px; /* Added max-width */
+    max-height: 300px;
+    border: 3px solid #202f61;
+    border-radius: 10px;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+[dir="rtl"] .about-image .image-border {
+    right: 20px;
+    left: auto;
+}
+
+@media (max-width: 850px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        height: 300px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .image-border {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .about-image img {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    [dir="rtl"] .image-border {
+        right: 50%;
+        left: auto;
+        transform: translateX(50%);
+    }
+
+    [dir="rtl"] .about-image img {
+        right: 50%;
+        left: auto;
+        transform: translateX(50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 100px 0 50px;
+    }
+}
+
+@media (max-width: 550px) {
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+}
