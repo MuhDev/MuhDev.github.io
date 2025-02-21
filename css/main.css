@@ -34,11 +34,28 @@ body::before {
     pointer-events: none; /* Added to ensure clicks pass through */
 }
 
+/* Direction specific styles */
+[dir="ltr"] {
+    text-align: left;
+}
+
+[dir="rtl"] {
+    text-align: right;
+}
+
 .container {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
     padding: 0;
+    direction: rtl;
+}
+
+[dir="ltr"] .container {
+    direction: ltr;
+}
+
+[dir="rtl"] .container {
     direction: rtl;
 }
 
@@ -60,6 +77,19 @@ input,
 select, 
 textarea {
     text-align: right;
+}
+
+/* Form elements direction handling */
+[dir="ltr"] input,
+[dir="ltr"] textarea {
+    text-align: left;
+    direction: ltr;
+}
+
+[dir="rtl"] input,
+[dir="rtl"] textarea {
+    text-align: right;
+    direction: rtl;
 }
 
 .btn {
