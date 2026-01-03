@@ -1,5 +1,6 @@
 .contact {
-    padding: 100px 0 50px; /* Match other sections padding */
+    padding: 100px 0 50px;
+    /* Match other sections padding */
     min-height: 735px;
 }
 
@@ -11,7 +12,8 @@
     display: flex;
     justify-content: center;
     gap: 50px;
-    margin-top: 50px; /* Match other sections top margin */
+    margin-top: 50px;
+    /* Match other sections top margin */
     margin-bottom: 50px;
 }
 
@@ -72,14 +74,17 @@
     border: 1px solid #324499;
     border-radius: 8px;
     color: white;
+    direction: rtl;
+    text-align: right;
 }
 
 .form-group textarea {
     resize: vertical;
 }
 
-.btn {
-    width: 100%;
+.contact-form .btn {
+    width: auto;
+    padding: 0 40px;
     height: 50px;
     background: #324499;
     color: white;
@@ -118,7 +123,7 @@
     .contact {
         min-height: 1300px;
     }
-    
+
     .contact-content {
         flex-direction: column;
         align-items: center;

@@ -5,8 +5,10 @@
 .about .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
-    align-items: center; /* Change from start to center */
+    column-gap: 4rem;
+    row-gap: 0;
+    align-items: center;
+    /* Change from start to center */
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
@@ -22,11 +24,13 @@
     flex-direction: column;
     width: 100%;
     text-align: right;
-    align-self: center; /* Add this */
+    align-self: center;
+    /* Add this */
 }
 
 .about-info {
-    grid-column: span 6; /* Take up 6 columns */
+    grid-column: span 6;
+    /* Take up 6 columns */
     width: 100%;
 }
 
@@ -88,7 +92,8 @@
         padding: 0;
         position: relative;
         width: fit-content;
-        margin: 2rem auto; /* Add margin for better spacing */
+        margin: 2rem auto;
+        /* Add margin for better spacing */
     }
 
     .image-border {
@@ -105,7 +110,8 @@
         position: relative;
         left: 50%;
         transform: translateX(-50%);
-        transition: none; /* Disable transitions */
+        transition: none;
+        /* Disable transitions */
     }
 
     /* Remove all hover states for mobile */
@@ -134,13 +140,15 @@
     }
 
     .about-content {
-        grid-template-columns: 1fr; /* Stack on mobile */
+        grid-template-columns: 1fr;
+        /* Stack on mobile */
         gap: 3rem;
     }
 
     .about-info,
     .about-image {
-        grid-column: 1 / -1; /* Full width on mobile */
+        grid-column: 1 / -1;
+        /* Full width on mobile */
     }
 }
 
