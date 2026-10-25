@@ -400,17 +400,49 @@ function setupMobileMenu() {
   const toggleBtn = document.getElementById('mobileMenuToggle');
   const navLinks = document.getElementById('navLinks');
 
-  if (toggleBtn && navLinks) {
-    toggleBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('mobile-open');
-    });
+  if (!toggleBtn || !navLinks) return;
 
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('mobile-open');
-      });
+  const closeMenu = () => {
+    navLinks.classList.remove('mobile-open');
+    toggleBtn.setAttribute('aria-expanded', 'false');
+    toggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
+  };
+
+  const openMenu = () => {
+    navLinks.classList.add('mobile-open');
+    toggleBtn.setAttribute('aria-expanded', 'true');
+    toggleBtn.innerHTML = '<i class="fas fa-xmark"></i>';
+  };
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = navLinks.classList.contains('mobile-open');
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      closeMenu();
     });
-  }
+  });
+
+  // Close when clicking outside of nav
+  document.addEventListener('click', (e) => {
+    if (navLinks.classList.contains('mobile-open') && !navLinks.contains(e.target) && !toggleBtn.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  // Close when pressing Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navLinks.classList.contains('mobile-open')) {
+      closeMenu();
+    }
+  });
 }
 
 function showToast(message) {

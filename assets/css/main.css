@@ -134,6 +134,7 @@ body {
 }
 
 .nav-island {
+  position: relative;
   pointer-events: auto;
   max-width: 980px;
   margin-inline: auto;
@@ -271,8 +272,12 @@ body {
   transform: scale(0.96);
 }
 
-/* Mobile Menu Toggle */
+/* Mobile Menu Toggle & Mobile CTA Container */
 .menu-toggle {
+  display: none;
+}
+
+.nav-mobile-cta {
   display: none;
 }
 
@@ -1821,22 +1826,165 @@ html[dir="rtl"] .skills-marquee-track:hover {
 }
 
 @media (max-width: 768px) {
-  .nav-links { display: none; }
+  /* Floating header container on mobile */
+  .header-sticky {
+    top: max(12px, env(safe-area-inset-top));
+    padding-inline: 12px;
+  }
+
+  .nav-island {
+    width: 100%;
+    padding: 6px 12px;
+    gap: 8px;
+    border-radius: var(--radius-full);
+  }
+
+  .nav-logo {
+    padding: 4px 6px;
+    gap: 8px;
+  }
+
+  .nav-logo-mark {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+  }
+
+  .nav-logo-text {
+    font-size: var(--font-size-sm);
+    white-space: nowrap;
+  }
+
+  .nav-actions {
+    gap: 6px;
+  }
+
+  /* Hide the crowded CTA button on mobile navbar - it lives cleanly inside the mobile menu dropdown */
+  .nav-actions .btn-nav-cta {
+    display: none !important;
+  }
+
+  /* Symmetrical touch-friendly action buttons */
+  .menu-toggle {
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lang-switch-btn {
+    height: 36px;
+    padding-inline: 10px;
+    font-size: 0.75rem;
+  }
+
+  .theme-toggle-btn {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+  }
+
+  /* Mobile Dropdown Navigation Menu */
+  .nav-links {
+    display: none;
+  }
+
   .nav-links.mobile-open {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: calc(100% + 12px);
-    inset-inline: 16px;
-    background: var(--bg-surface-glass-heavy);
-    backdrop-filter: blur(20px);
-    border: 1px solid var(--border-strong);
-    border-radius: var(--radius-xl);
-    padding: 16px;
-    box-shadow: var(--shadow-lg);
+    top: calc(100% + 10px);
+    inset-inline: 0;
+    background: rgba(13, 13, 20, 0.96);
+    backdrop-filter: blur(28px) saturate(190%);
+    -webkit-backdrop-filter: blur(28px) saturate(190%);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-2xl);
+    padding: 10px;
+    gap: 4px;
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.06);
+    z-index: 1000;
+    pointer-events: auto;
+    animation: navMobileSlideDown 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
-  .menu-toggle { display: inline-flex; }
+
+  [data-theme="light"] .nav-links.mobile-open {
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  }
+
+  .nav-links.mobile-open li {
+    width: 100%;
+  }
+
+  .nav-links.mobile-open .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: var(--radius-lg);
+    font-size: var(--font-size-base);
+    font-weight: var(--weight-medium);
+    color: var(--text-secondary);
+    min-height: 48px;
+    transition: background-color var(--spring-fast), color var(--spring-fast);
+  }
+
+  .nav-links.mobile-open .nav-link:hover,
+  .nav-links.mobile-open .nav-link.active {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  [data-theme="light"] .nav-links.mobile-open .nav-link:hover,
+  [data-theme="light"] .nav-links.mobile-open .nav-link.active {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  /* Full-width mobile CTA inside the menu */
+  .nav-mobile-cta {
+    display: flex !important;
+    margin-top: 6px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .nav-mobile-cta .btn-nav-cta {
+    display: flex !important;
+    width: 100%;
+    justify-content: center;
+    padding: 12px 18px;
+    font-size: var(--font-size-sm);
+    border-radius: var(--radius-xl);
+  }
+
   .bento-card-medium { grid-column: span 12; }
   .skills-grid { grid-template-columns: 1fr; }
   .hero-stats-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .lang-switch-label {
+    display: none;
+  }
+  .lang-switch-btn {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    justify-content: center;
+  }
+}
+
+@keyframes navMobileSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
