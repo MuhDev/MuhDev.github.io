@@ -1,189 +1,398 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>محمد العطاس | مطور تطبيقات جوال</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-    <meta name="description" content="ملف أعمال محمد العطاس، مطور متخصص في تطبيقات الجوال.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>محمد العطاس (MuhDev) | مطور تطبيقات جوال ومصمم واجهات</title>
+  <meta name="description" content="مطور تطبيقات جوال ومصمم واجهات، متخصص في بناء تطبيقات iOS و Android عالية الأداء بـ Flutter.">
+  <meta name="keywords" content="MuhDev, Mohammed Al-Attas, محمد العطاس, Flutter Developer, UI/UX Designer, iOS, Android, السعودية, الرياض">
+  <meta name="author" content="Mohammed Al-Attas">
+
+  <!-- OpenGraph / Social Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="محمد العطاس (MuhDev) | مطور تطبيقات ومصمم واجهات">
+  <meta property="og:description" content="أحوّل الأفكار والتصاميم إلى تطبيقات جوال سريعة وعالية الأداء بـ Flutter وبمعمارية برمجية متقنة.">
+  <meta property="og:image" content="assets/images/myPics2.jpg">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+  <!-- Typography: Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Core Design System & Styles -->
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/typography.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">م. العطاس.</a>
-            <ul class="nav-links">
-                <li><a href="#hero">الرئيسية</a></li>
-                <li><a href="#about">من أنا</a></li>
-                <li><a href="#projects">أعمالي</a></li>
-                <li><a href="#certifications">التعليم</a></li>
-                <li><a href="#skills">مهاراتي</a></li>
-                <li><a href="#contact" class="btn-nav">تواصل معي</a></li>
-            </ul>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
+
+  <!-- Ambient Glowing Background Canvas -->
+  <div class="ambient-canvas">
+    <div class="ambient-orb ambient-orb-1"></div>
+    <div class="ambient-orb ambient-orb-2"></div>
+    <div class="ambient-orb ambient-orb-3"></div>
+  </div>
+
+  <!-- Pinned Floating Island Navigation -->
+  <header class="header-sticky">
+    <nav class="nav-island" aria-label="Main Navigation">
+      <a href="#hero" class="nav-logo btn-press" title="MuhDev | محمد العطاس">
+        <img src="assets/favicon.svg" alt="MuhDev" class="nav-logo-mark">
+        <span class="nav-logo-text">م. العطاس</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active" data-i18n="navHome">الرئيسية</a></li>
+        <li><a href="#craft" class="nav-link" data-i18n="navCraft">الحِرفية</a></li>
+        <li><a href="#projects" class="nav-link" data-i18n="navProjects">الأعمال</a></li>
+        <li><a href="#skills" class="nav-link" data-i18n="navSkills">المهارات</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="navContact">تواصل معي</a></li>
+      </ul>
+
+      <!-- Nav Action Controls -->
+      <div class="nav-actions">
+        <!-- Language Switcher Pill -->
+        <button class="icon-btn lang-switch-btn btn-press" aria-label="Switch Language" title="تغيير اللغة / Switch Language">
+          <i class="fas fa-language"></i>
+          <span class="lang-switch-label">English</span>
+        </button>
+
+        <!-- Theme Toggle Button -->
+        <button class="icon-btn theme-toggle-btn btn-press" aria-label="Toggle Theme" title="تبديل المظهر / Toggle Theme">
+          <i class="fas fa-sun theme-toggle-icon"></i>
+        </button>
+
+        <!-- Quick Contact CTA -->
+        <a href="#contact" class="btn-nav-cta btn-press" data-i18n="navContact">
+          <span>تواصل معي</span>
+          <i class="fas fa-paper-plane" style="font-size: 0.75rem;"></i>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="icon-btn menu-toggle btn-press" id="mobileMenuToggle" aria-label="Toggle Navigation Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="container hero-content">
-            <h1 class="hero-title animate-on-scroll">بناء تطبيقات جوال </h1>
-            <h1 class="hero-title animate-on-scroll"><span class="highlight txt-rotate" data-period="2000" data-rotate='[ "عالية الأداء.", "جذابة وعصرية.", "سهلة الاستخدام." ]'></span></h1>
-            <p class="hero-subtitle animate-on-scroll delay-100">أهلاً، أنا <span class="highlight">محمد العطاس</span>. متخصص في تطوير تطبيقات iOS و Android عالية الأداء باستخدام <span class="highlight">Flutter</span>.</p>
-            <div class="hero-cta animate-on-scroll delay-200">
-                <a href="#projects" class="btn btn-primary">تصفح أعمالي</a>
-                <a href="#contact" class="btn btn-secondary">تواصل معي</a>
-            </div>
-        </div>
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section id="hero" class="hero-section container">
+      <!-- Profile Picture Halo -->
+      <div class="hero-avatar-wrapper reveal-init">
+        <img src="assets/images/myPics2.jpg" alt="Mohammed Al-Attas" class="hero-avatar">
+      </div>
+
+      <!-- Main Headline with Kinetic Shimmer -->
+      <h1 class="hero-title display-heading reveal-init delay-100">
+        <span data-i18n-hero-intro>مرحباً، أنا</span>
+        <span class="text-shimmer">محمد العطاس</span>
+      </h1>
+
+      <!-- Role & Value Proposition Subtitle -->
+      <p class="hero-subtitle reveal-init delay-200">
+        أحوّل الأفكار والتصاميم إلى تطبيقات جوال سريعة وعالية الأداء لنظامي iOS و Android باستخدام Flutter، مع التزام بأعلى معايير المعمارية النظيفة Clean Architecture وتجربة مستخدم سلسة ومتقنة.
+      </p>
+
+      <!-- Primary Action Buttons -->
+      <div class="hero-actions reveal-init delay-300">
+        <a href="#projects" class="btn-primary btn-press" data-i18n="heroExploreBtn">
+          <span>تصفح أعمالي</span>
+          <i class="fas fa-arrow-down"></i>
+        </a>
+        <a href="#contact" class="btn-secondary btn-press" data-i18n="heroContactBtn">
+          <span>ابدأ محادثة</span>
+          <i class="fas fa-envelope"></i>
+        </a>
+        <button class="btn-secondary btn-press" id="copyEmailPill" title="نسخ البريد الإلكتروني">
+          <i class="fas fa-copy"></i>
+          <span data-i18n="copyEmail">نسخ البريد الإلكتروني</span>
+        </button>
+      </div>
+
+      <!-- Quick Metrics Telemetry Row -->
+      <div class="hero-stats-row reveal-init delay-400" id="heroStatsRow">
+        <!-- Rendered dynamically via app.js -->
+      </div>
     </section>
 
-    <!-- About Me Section -->
-    <section id="about" class="section about">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">نبذة عني</h2>
-            <div class="about-grid">
-                <div class="about-text animate-on-scroll delay-100">
-                    <p>أنا مطور تطبيقات جوال شغوف أكرس وقتي لبناء تطبيقات سلسة وقوية. من خلال فهمي العميق لتطوير البرمجيات، أقوم بسد الفجوة بين الوظائف المعقدة وتجربة المستخدم السلسة.</p>
-                    <p>أركز بشكل كامل على تطوير حلول متعددة المنصات باستخدام Flutter، وأضمن أن يكون كل تطبيق أبنيه محسنًا للأداء وقابل للتوسع ويوفر أفضل تجربة للمستخدم.</p>
-                </div>
-                <div class="about-image animate-on-scroll delay-200">
-                    <img src="assets/images/myPics2.jpg" alt="محمد العطاس" class="profile-img">
-                </div>
-            </div>
-        </div>
+    <!-- ==========================================================================
+         BENTO GRID: CRAFT & PHILOSOPHY
+         ========================================================================== -->
+    <section id="craft" class="section-wrapper container">
+      <div class="section-header reveal-init">
+        <h2 class="section-title" data-i18n="craftTitle">بين دقة الكود وإتقان التجربة</h2>
+        <p class="section-description" data-i18n="craftSubtitle">
+          لا نبني مجرد تطبيقات، بل نصنع تجارب رقمية سريعة، موثوقة، ومصممة بأعلى معايير الإتقان والجودة.
+        </p>
+      </div>
+
+      <!-- Dynamic Bento Grid Container -->
+      <div class="bento-grid" id="bentoCraftGrid">
+        <!-- Rendered dynamically via app.js -->
+      </div>
     </section>
 
-    <!-- Featured Projects Section -->
-    <section id="projects" class="section projects">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">مشاريع مختارة</h2>
-            <div class="projects-grid">
-                <!-- Projects will be rendered dynamically via JavaScript -->
-            </div>
-        </div>
+    <!-- ==========================================================================
+         FEATURED PROJECTS SHOWCASE
+         ========================================================================== -->
+    <section id="projects" class="section-wrapper container">
+      <div class="section-header reveal-init">
+        <h2 class="section-title" data-i18n="projectsTitle">مشاريع وتطبيقات مختارة</h2>
+        <p class="section-description" data-i18n="projectsSubtitle">
+          نماذج من التطبيقات المنشورة على المتاجر التي قمت بتطويرها وهندستها وفق أعلى معايير الأداء والاعتمادية.
+        </p>
+      </div>
+
+      <!-- Dynamic Projects Showcase Grid -->
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Rendered dynamically via app.js -->
+      </div>
     </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications" class="section certifications">
-        <div class="container">
-            <h2 class="section-title">الشهادات والتعليم</h2>
-            <div class="cert-grid">
-                <!-- Bachelor's Degree -->
-                <div class="cert-card degree-card animate-on-scroll">
-                    <div class="cert-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <div class="cert-content">
-                        <h3>بكالوريوس تقنية المعلومات</h3>
-                        <p class="cert-issuer">جامعة حضرموت</p>
-                        <p class="cert-date">2018 - 2022</p>
-                        <p class="cert-desc">تخصص تقنية المعلومات , مسار تطوير البرمجيات .</p>
-                    </div>
-                </div>
+    <!-- ==========================================================================
+         SKILLS MATRIX SECTION (Interactive 3D Sphere - Inspired by pszostak.pl)
+         ========================================================================== -->
+    <section id="skills" class="section-wrapper container">
+      <div class="section-header reveal-init">
+        <h2 class="section-title" data-i18n="skillsTitle">المهارات والتقنيات</h2>
+        <p class="section-description" data-i18n="skillsSubtitle">
+          كرة تفاعلية ثلاثية الأبعاد تعرض التقنيات والأدوات التي أعتمد عليها في بناء المشاريع. اسحب الكرة واستكشف التفاصيل.
+        </p>
+      </div>
 
-                <!-- Certificate 1 -->
-                <div class="cert-card animate-on-scroll">
-                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
-                    <div class="cert-content">
-                        <h3>Google AI Essentials</h3>
-                        <p class="cert-issuer">Coursera</p>
-                        <p class="cert-date">2026</p>
-                        <a href="https://coursera.org/share/11ac79d580c6cc1cf4341e305f6995e2" target="_blank" class="cert-link">عرض الشهادة <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
+      <!-- Filter Controls -->
+      <div class="skills-filter-nav reveal-init delay-100" id="skillsFilterNav">
+        <button class="skills-filter-btn active" data-filter="all" data-i18n="skillsFilterAll">الكل</button>
+        <button class="skills-filter-btn" data-filter="mobile" data-i18n="skillsFilterMobile">تطوير الجوال</button>
+        <button class="skills-filter-btn" data-filter="design" data-i18n="skillsFilterDesign">تصميم الواجهات</button>
+        <button class="skills-filter-btn" data-filter="backend" data-i18n="skillsFilterBackend">السحابة والباك إند</button>
+        <button class="skills-filter-btn" data-filter="tools" data-i18n="skillsFilterTools">الأدوات والمعمارية</button>
+      </div>
 
-                <!-- Certificate 2 -->
-                <!--
-                <div class="cert-card animate-on-scroll">
-                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
-                    <div class="cert-content">
-                        <h3>React و GraphQL المتقدمة</h3>
-                        <p class="cert-issuer">Coursera</p>
-                        <p class="cert-date">صدرت في 2025</p>
-                        <a href="#" class="cert-link">عرض الشهادة <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                -->
-            </div>
+      <!-- 3D Fibonacci Sphere Arena -->
+      <div class="skills-sphere-wrapper reveal-init delay-200">
+        <div class="skills-sphere-container" id="skillsSphereContainer">
+          <canvas class="skills-wireframe-canvas" id="skillsWireframeCanvas"></canvas>
+          <div class="skills-sphere-stage" id="skillsSphereStage">
+            <!-- 3D Nodes injected dynamically via skills-sphere.js -->
+          </div>
         </div>
+
+        <!-- Interactive Drag Hint -->
+        <div class="sphere-hint-pill">
+          <i class="fas fa-arrows-spin"></i>
+          <span data-i18n="sphereHint">اسحب لتدوير كرة المهارات واستكشف التقنيات</span>
+        </div>
+      </div>
+
+      <!-- Infinite Moving Marquee Ticker -->
+      <div class="skills-marquee-section reveal-init delay-300">
+        <div class="skills-marquee-track" id="skillsMarqueeTrack">
+          <!-- Marquee tech badges injected dynamically via skills-sphere.js -->
+        </div>
+      </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section skills">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">المهارات التقنية</h2>
-            <div class="skills-wrapper">
-                <div class="skill-category animate-on-scroll delay-100">
-                    <h3>فرونت إند</h3>
-                    <div class="skill-grid">
-                        <div class="skill-item"><img src="assets/svg/flutter.svg" alt="Flutter"><span>Flutter</span></div>
-                        <div class="skill-item"><i class="fab fa-html5"></i><span>HTML</span></div>
-                        <div class="skill-item"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
-                        <div class="skill-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
-                    </div>
-                </div>
-                <div class="skill-category animate-on-scroll delay-200">
-                    <h3>باك إند</h3>
-                    <div class="skill-grid">
-                        <div class="skill-item"><i class="fas fa-fire"></i><span>Firebase</span></div>
-                        <div class="skill-item"><i class="fab fa-python"></i><span>Django</span></div>
-                        <div class="skill-item"><i class="fas fa-database"></i><span>SQL</span></div>
-                        <div class="skill-item"><i class="fas fa-leaf"></i><span>NoSQL</span></div>
-                    </div>
-                </div>
-                <div class="skill-category animate-on-scroll delay-300">
-                    <h3>الأدوات والعمليات</h3>
-                    <div class="skill-grid">
-                        <div class="skill-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
-                        <div class="skill-item"><i class="fas fa-cogs"></i><span>CI/CD</span></div>
-                        <div class="skill-item"><i class="fab fa-docker"></i><span>Docker</span></div>
-                        <div class="skill-item"><i class="fas fa-robot"></i><span>Ai Agents</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- ==========================================================================
+         CONTACT SECTION & FORMSPREE
+         ========================================================================== -->
+    <section id="contact" class="section-wrapper container">
+      <div class="section-header reveal-init">
+        <h2 class="section-title" data-i18n="contactTitle">جاهز لإطلاق مشروعك القادم؟</h2>
+        <p class="section-description" data-i18n="contactSubtitle">
+          سواء كانت لديك فكرة تطبيق جديدة أو تبحث عن مهندس متمرس للانضمام لفريقك، يسعدني التحدث معك ومناقشة التفاصيل.
+        </p>
+      </div>
 
-    <!-- Footer -->
-    <footer id="contact" class="footer">
-        <div class="container footer-content animate-on-scroll">
-            <div class="contact-form-wrapper">
-                <h3>تواصل معي</h3>
-                <!-- 
-                     NOTE: To make this form work, you need to:
-                     1. Go to https://formqspree.io/ and sign up (it's free).
-                     2. Create a new form and get your Form ID.
-                     3. Replace 'YOUR_FORM_ID' in the action attribute below with your actual Form ID.
-                -->
-                <form class="contact-form" action="https://formspree.io/f/xaqenjnp" method="POST">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="الاسم" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="البريد الإلكتروني" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="الرسالة" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">إرسال الرسالة</button>
-                </form>
+      <div class="contact-container">
+        <!-- Left / Contact Direct Channels Card -->
+        <div class="contact-info-card glass-panel reveal-init delay-100">
+          <div>
+            <div class="contact-info-header">
+              <div class="bento-icon-badge">
+                <i class="fas fa-comments"></i>
+              </div>
+              <h3 class="bento-card-title" data-i18n="contactDirectHeading">قنوات التواصل المباشر</h3>
+              <p class="bento-card-text" data-i18n="contactDirectDesc">
+                متاح دائماً لمناقشة أفكار وتطبيقات جديدة وتقديم حلول تقنية وتصميمية متكاملة.
+              </p>
             </div>
-            <div class="social-links">
-                <a href="mailto:muh.ata.dev@gmail.com" class="social-icon" aria-label="البريد الإلكتروني"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/mohammed-al-attas-09416a234/" target="_blank" class="social-icon" aria-label="لينكد إن"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/MuhDev?tab=repositories" target="_blank" class="social-icon" aria-label="جيت هب"><i class="fab fa-github"></i></a>
+
+            <!-- Direct Contact Channels List -->
+            <div class="contact-channels-list">
+              <!-- WhatsApp Direct Card -->
+              <a href="https://wa.me/966534954757" target="_blank" rel="noopener noreferrer" class="contact-channel-item whatsapp-channel btn-press">
+                <div class="channel-icon-wrap whatsapp-badge">
+                  <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-label" data-i18n="contactWhatsappTitle">محادثة واتساب</span>
+                  <span class="channel-value text-mono">+966 53 495 4757</span>
+                </div>
+                <div class="channel-action-badge whatsapp-action">
+                  <span data-i18n="contactWhatsappSub">رد سريع ومباشر</span>
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </div>
+              </a>
+
+              <!-- Phone Call Card -->
+              <a href="tel:+966534954757" class="contact-channel-item phone-channel btn-press">
+                <div class="channel-icon-wrap phone-badge">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-label" data-i18n="contactPhoneTitle">اتصال هاتفي</span>
+                  <span class="channel-value text-mono">+966 53 495 4757</span>
+                </div>
+                <div class="channel-action-badge phone-action">
+                  <span data-i18n="contactPhoneSub">متاح للمكالمات</span>
+                  <i class="fas fa-phone-volume"></i>
+                </div>
+              </a>
+
+              <!-- Copy Email Card -->
+              <div class="contact-channel-item email-channel btn-press" id="copyEmailContact" role="button" tabindex="0">
+                <div class="channel-icon-wrap email-badge">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-label" data-i18n="contactEmailTitle">البريد الإلكتروني</span>
+                  <span class="channel-value text-mono">muh.ata.dev@gmail.com</span>
+                </div>
+                <div class="channel-action-badge email-action">
+                  <span data-i18n="contactEmailSub">انقر لنسخ البريد</span>
+                  <i class="fas fa-copy"></i>
+                </div>
+              </div>
             </div>
-            <p class="copyright">&copy; 2026 محمد العطاس. جميع الحقوق محفوظة.</p>
+          </div>
+
+          <!-- Bottom Footer of Info Card: Social Links -->
+          <div class="contact-card-footer">
+            <span class="contact-social-label text-mono" style="font-size: var(--font-size-xs); color: var(--text-muted);">Connect with me:</span>
+
+            <!-- Social Links Dock -->
+            <div class="social-dock">
+              <a href="https://wa.me/966534954757" target="_blank" rel="noopener noreferrer" class="social-dock-btn whatsapp-hover" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/mohammed-al-attas-09416a234/" target="_blank" rel="noopener noreferrer" class="social-dock-btn" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/MuhDev" target="_blank" rel="noopener noreferrer" class="social-dock-btn" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="mailto:muh.ata.dev@gmail.com" class="social-dock-btn" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
         </div>
-    </footer>
-    <script src="js/projects.js"></script>
-    <script src="js/script.js"></script>
+
+        <!-- Right / Formspree AJAX Form -->
+        <div class="contact-form-card glass-panel reveal-init delay-200">
+          <form class="contact-form" id="contactForm" action="https://formspree.io/f/xaqenjnp" method="POST">
+            <div class="form-group">
+              <label class="form-label" for="formName" data-i18n="formNamePlaceholder">الاسم الكريم</label>
+              <div class="form-input-wrap">
+                <i class="fas fa-user input-icon"></i>
+                <input type="text" id="formName" name="name" class="form-input" placeholder="الاسم الكريم" data-i18n-placeholder="formNamePlaceholder" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="formEmail" data-i18n="formEmailPlaceholder">البريد الإلكتروني</label>
+              <div class="form-input-wrap">
+                <i class="fas fa-envelope input-icon"></i>
+                <input type="email" id="formEmail" name="email" class="form-input" placeholder="البريد الإلكتروني" data-i18n-placeholder="formEmailPlaceholder" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="formMessage" data-i18n="formMsgPlaceholder">الرسالة</label>
+              <div class="form-input-wrap">
+                <textarea id="formMessage" name="message" class="form-textarea" placeholder="أخبرني عن مشروعك، فكرتك، أو استفسارك..." data-i18n-placeholder="formMsgPlaceholder" required></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-submit btn-press">
+              <i class="fas fa-paper-plane"></i>
+              <span data-i18n="formSubmitBtn">إرسال الرسالة</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-text">
+        <span>© 2026 محمد العطاس (MuhDev). </span>
+        <span data-i18n="rightsReserved">جميع الحقوق محفوظة.</span>
+      </div>
+      <a href="#hero" class="btn-secondary btn-press" style="padding:8px 16px; font-size:var(--font-size-xs);" data-i18n="backToTop">
+        <i class="fas fa-arrow-up"></i>
+        <span>للأعلى</span>
+      </a>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       PROJECT CASE-STUDY MODAL DIALOG
+       ========================================================================== -->
+  <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalProjectTitle">
+    <div class="modal-dialog" id="projectModalDialog">
+      <button class="modal-close-btn" id="projectModalClose" aria-label="Close Case Study">
+        <i class="fas fa-xmark"></i>
+      </button>
+
+      <div class="modal-body">
+        <div style="display:flex; align-items:center; gap:16px; margin-bottom:16px;">
+          <img src="" alt="" id="modalProjectLogo" style="width:52px; height:52px; border-radius:12px; object-fit:cover; border:1px solid var(--border-subtle);">
+          <div>
+            <h2 id="modalProjectTitle" style="font-size:var(--font-size-2xl); font-weight:var(--weight-bold);"></h2>
+          </div>
+        </div>
+
+        <p id="modalProjectDesc" style="color:var(--text-secondary); line-height:var(--leading-relaxed); margin-bottom:20px; font-size:var(--font-size-base);"></p>
+
+        <!-- Project Tags -->
+        <div id="modalProjectTags" style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px;"></div>
+
+        <!-- Screenshots Gallery -->
+        <div id="modalProjectGallery" class="modal-gallery"></div>
+
+        <!-- Store & Repo Links -->
+        <div id="modalProjectActions" style="display:flex; flex-wrap:wrap; gap:12px; margin-top:20px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/skills-sphere.js"></script>
+  <script src="assets/js/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,140 @@
+/**
+ * typography.css - Dual Bilingual Typography Engine
+ * Arabic (Cairo) & English (Plus Jakarta Sans / Inter) with JetBrains Mono for code & telemetry.
+ */
+
+:root {
+  --font-arabic: 'Cairo', system-ui, -apple-system, sans-serif;
+  --font-english: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+
+  /* Default Font (dynamically set based on lang attribute) */
+  --font-main: var(--font-arabic);
+
+  /* Fluid Type Scale */
+  --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem);
+  --font-size-sm: clamp(0.875rem, 0.825rem + 0.25vw, 0.9375rem);
+  --font-size-base: clamp(1rem, 0.95rem + 0.25vw, 1.0625rem);
+  --font-size-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.25rem);
+  --font-size-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --font-size-2xl: clamp(1.5rem, 1.35rem + 0.75vw, 1.875rem);
+  --font-size-3xl: clamp(1.875rem, 1.65rem + 1.1vw, 2.375rem);
+  --font-size-4xl: clamp(2.25rem, 1.95rem + 1.5vw, 3rem);
+  --font-size-5xl: clamp(2.75rem, 2.35rem + 2vw, 4rem);
+  --font-size-display: clamp(3.25rem, 2.75rem + 2.75vw, 5rem);
+
+  /* Line Heights */
+  --leading-none: 1;
+  --leading-tight: 1.15;
+  --leading-snug: 1.3;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.8;
+
+  /* Weights */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-black: 800;
+}
+
+/* LTR / English Font Setup */
+html[lang="en"] {
+  --font-main: var(--font-english);
+}
+
+html[lang="en"] body {
+  letter-spacing: -0.015em;
+}
+
+html[lang="en"] .display-heading {
+  letter-spacing: -0.04em;
+}
+
+/* RTL / Arabic Font Setup */
+html[lang="ar"] {
+  --font-main: var(--font-arabic);
+}
+
+html[lang="ar"] body {
+  letter-spacing: 0;
+  line-height: 1.65;
+}
+
+html[lang="ar"] .display-heading {
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: var(--font-size-base);
+  color: var(--text-primary);
+  background-color: var(--bg-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Heading Utility Classes */
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  color: var(--text-primary);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+}
+
+.text-mono {
+  font-family: var(--font-mono);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--accent-gradient-start), var(--accent-gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+/* Shimmering Text Effect (Inspired by pszostak.pl) */
+.text-shimmer {
+  background: linear-gradient(
+    110deg,
+    #ffffff 0%,
+    #ffffff 35%,
+    var(--accent-hover) 48%,
+    #a855f7 52%,
+    #ffffff 65%,
+    #ffffff 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textShimmer 4s ease-in-out infinite;
+  display: inline-block;
+}
+
+[data-theme="light"] .text-shimmer {
+  background: linear-gradient(
+    110deg,
+    #0f172a 0%,
+    #0f172a 35%,
+    var(--accent) 50%,
+    #0f172a 65%,
+    #0f172a 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textShimmer 4s ease-in-out infinite;
+}
+
+@keyframes textShimmer {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: -100% 50%;
+  }
+}

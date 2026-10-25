@@ -1,0 +1,230 @@
+/**
+ * animations.css - Fluid Micro-interactions & Hardware-accelerated Motion
+ * Respects prefers-reduced-motion and Emil Kowalski's craft benchmarks.
+ */
+
+/* Ambient Glowing Background Orbs */
+@keyframes ambientPulse {
+  0%, 100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.12) translate(15px, -15px);
+    opacity: 0.95;
+  }
+}
+
+.ambient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: var(--z-ambient);
+  animation: ambientPulse 12s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* Pulsing Status Dot */
+@keyframes statusRadar {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--success);
+  border-radius: 50%;
+  display: inline-block;
+  animation: statusRadar 2s infinite ease-out;
+  position: relative;
+}
+
+/* Scroll Reveal Elements */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 600ms cubic-bezier(0.16, 1, 0.3, 1), transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger Delay Utilities */
+.delay-100 { transition-delay: 100ms; }
+.delay-150 { transition-delay: 150ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+
+/* Interactive Card Hover Effects (Emil Kowalski rule: explicit transitions) */
+.card-hover {
+  transition: transform var(--spring-normal), border-color var(--spring-normal), box-shadow var(--spring-normal);
+  will-change: transform;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  border-color: var(--card-border-hover, var(--border-strong));
+  box-shadow: var(--shadow-md), 0 0 20px rgba(139, 92, 246, 0.12);
+}
+
+/* Button Press Tactile Response */
+.btn-press {
+  transition: transform var(--spring-fast), opacity var(--spring-fast), background-color var(--spring-fast);
+}
+
+.btn-press:active {
+  transform: scale(0.96);
+}
+
+/* Interactive Badge / Pill Hover */
+.pill-hover {
+  transition: transform var(--spring-fast), background-color var(--spring-fast), border-color var(--spring-fast);
+}
+
+.pill-hover:hover {
+  transform: translateY(-1px);
+}
+
+/* Glass Surface Styling */
+.glass-panel {
+  background: var(--bg-surface-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+}
+
+.glass-pill {
+  background: var(--bg-surface-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+}
+
+/* Modal Animations */
+@keyframes modalBackdropFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalContentPopIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modal-backdrop.active {
+  animation: modalBackdropFadeIn 250ms ease forwards;
+}
+
+.modal-dialog.active {
+  animation: modalContentPopIn 320ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Sonner-Style Toast Animations */
+@keyframes toastSlideUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+
+@keyframes toastSlideDown {
+  from {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, 15px) scale(0.95);
+  }
+}
+
+.toast-container {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: var(--z-toast);
+  pointer-events: none;
+}
+
+.toast {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: var(--bg-surface-glass-heavy);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-lg), 0 0 20px var(--glow-primary);
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--weight-medium);
+  animation: toastSlideUp 280ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.toast.toast-hide {
+  animation: toastSlideDown 200ms ease forwards;
+}
+
+/* Device Mockup Tilt Effect */
+.mockup-tilt-wrapper {
+  perspective: 1000px;
+}
+
+.mockup-tilt {
+  transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.card-hover:hover .mockup-tilt {
+  transform: rotateY(-4deg) rotateX(2deg) translateY(-3px);
+}
+
+html[dir="rtl"] .card-hover:hover .mockup-tilt {
+  transform: rotateY(4deg) rotateX(2deg) translateY(-3px);
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal-init {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
