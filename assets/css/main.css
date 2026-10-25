@@ -1509,6 +1509,7 @@ html[dir="rtl"] .skills-marquee-track:hover {
   flex-direction: column;
   gap: 2px;
   flex: 1;
+  min-width: 0;
   margin-inline: 14px;
 }
 
@@ -1524,6 +1525,8 @@ html[dir="rtl"] .skills-marquee-track:hover {
   font-weight: var(--weight-bold);
   direction: ltr;
   text-align: start;
+  overflow-wrap: anywhere;
+  word-break: break-all;
 }
 
 .channel-action-badge {
@@ -2041,6 +2044,105 @@ html[dir="rtl"] .skills-marquee-track:hover {
     height: 420px;
   }
 
+  /* Contact section mobile layout & responsive card sizing */
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contact-info-card,
+  .contact-form-card {
+    padding: 20px 16px;
+    border-radius: var(--radius-xl);
+    gap: 20px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contact-info-header {
+    margin-bottom: 16px;
+  }
+
+  .contact-channels-list {
+    gap: 12px;
+    width: 100%;
+  }
+
+  .contact-channel-item {
+    flex-wrap: wrap;
+    padding: 14px 14px;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .channel-icon-wrap {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  .channel-details {
+    margin-inline: 10px 0;
+    min-width: 0;
+    flex: 1;
+  }
+
+  .channel-label {
+    font-size: 0.72rem;
+  }
+
+  .channel-value {
+    font-size: 0.84rem;
+    overflow-wrap: anywhere;
+    word-break: break-all;
+  }
+
+  .channel-action-badge {
+    width: 100%;
+    justify-content: center;
+    padding: 8px 14px;
+    font-size: 0.78rem;
+    border-radius: var(--radius-md);
+    margin-top: 4px;
+    box-sizing: border-box;
+  }
+
+  .contact-card-footer {
+    padding-top: 16px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .social-dock {
+    justify-content: center;
+  }
+
+  /* Form inputs mobile friendly */
+  .form-input,
+  .form-textarea {
+    font-size: 16px; /* Prevents auto-zoom on mobile focus */
+    padding: 12px 14px;
+    padding-inline-start: 42px;
+  }
+
+  .form-textarea {
+    padding-inline-start: 14px;
+    min-height: 100px;
+  }
+
+  .btn-submit {
+    padding: 14px;
+    font-size: var(--font-size-base);
+    border-radius: var(--radius-lg);
+  }
+
   .bento-card-medium { grid-column: span 12; }
   .skills-grid { grid-template-columns: 1fr; }
   .hero-stats-row { grid-template-columns: 1fr; }
@@ -2049,6 +2151,16 @@ html[dir="rtl"] .skills-marquee-track:hover {
 @media (max-width: 480px) {
   .container {
     padding-inline: 12px;
+  }
+  .contact-info-card,
+  .contact-form-card {
+    padding: 16px 14px;
+  }
+  .contact-channel-item {
+    padding: 12px;
+  }
+  .channel-value {
+    font-size: 0.78rem;
   }
   .skills-sphere-container {
     height: 360px;
