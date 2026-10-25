@@ -62,7 +62,7 @@ class SkillsSphere {
 
     // Adjust radius responsively
     if (this.width < 500) {
-      this.radius = Math.min(150, this.width * 0.38);
+      this.radius = Math.min(120, this.width * 0.31);
     } else if (this.width < 800) {
       this.radius = 180;
     } else {
