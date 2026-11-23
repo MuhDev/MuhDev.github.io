@@ -1,52 +1,40 @@
-/**
- * theme.js - Obsidian Dark / Light Theme Controller
- * Defaults to Dark Obsidian, remembers preference.
- */
+const PortfolioPreferences = {
+  read(key) {
+    try {
+      return localStorage.getItem(key);
+    } catch {
+      return null;
+    }
+  },
 
-class ThemeManager {
-  constructor() {
-    this.currentTheme = localStorage.getItem('preferred_theme') || 'dark';
-    this.init();
+  write(key, value) {
+    try {
+      localStorage.setItem(key, value);
+    } catch {
+      // The controls still work when storage is unavailable.
+    }
   }
+};
 
-  init() {
-    this.applyTheme(this.currentTheme);
-    this.setupListeners();
-  }
+const root = document.documentElement;
+const urlLanguage = new URL(location.href).searchParams.get("lang");
+const savedLanguage = PortfolioPreferences.read("preferred_lang");
+const isSupportedLanguage = (language) => language === "ar" || language === "en";
 
-  setupListeners() {
-    const toggleBtns = document.querySelectorAll('.theme-toggle-btn');
-    toggleBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const targetTheme = this.currentTheme === 'dark' ? 'light' : 'dark';
-        this.applyTheme(targetTheme);
-      });
-    });
-  }
+root.lang = isSupportedLanguage(urlLanguage)
+  ? urlLanguage
+  : isSupportedLanguage(savedLanguage) ? savedLanguage : "ar";
+root.dir = root.lang === "ar" ? "rtl" : "ltr";
+root.dataset.theme = PortfolioPreferences.read("preferred_theme") === "dark" ? "dark" : "light";
 
-  applyTheme(theme) {
-    this.currentTheme = theme;
-    localStorage.setItem('preferred_theme', theme);
-    document.documentElement.setAttribute('data-theme', theme);
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.querySelector("[data-theme-toggle]");
+  const updateToggle = () => toggle.setAttribute("aria-pressed", String(root.dataset.theme === "dark"));
 
-    // Update icons
-    const icons = document.querySelectorAll('.theme-toggle-icon');
-    icons.forEach(icon => {
-      if (theme === 'dark') {
-        icon.className = 'fas fa-sun theme-toggle-icon';
-        icon.setAttribute('aria-label', 'Switch to light mode');
-      } else {
-        icon.className = 'fas fa-moon theme-toggle-icon';
-        icon.setAttribute('aria-label', 'Switch to dark mode');
-      }
-    });
-
-    document.dispatchEvent(new CustomEvent('themeChanged', { detail: { theme } }));
-  }
-
-  getTheme() {
-    return this.currentTheme;
-  }
-}
-
-window.Theme = new ThemeManager();
+  updateToggle();
+  toggle.addEventListener("click", () => {
+    root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
+    PortfolioPreferences.write("preferred_theme", root.dataset.theme);
+    updateToggle();
+  });
+});

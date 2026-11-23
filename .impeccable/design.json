@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-23T18:36:08.059Z",
+  "title": "Design System: MuhDev",
+  "extensions": {
+    "colorMeta": {
+      "paper": {"role":"neutral","displayName":"Warm paper","tonalRamp":["oklch(15% 0.007 97.4)","oklch(26% 0.007 97.4)","oklch(38% 0.007 97.4)","oklch(49% 0.007 97.4)","oklch(61% 0.007 97.4)","oklch(72% 0.007 97.4)","oklch(84% 0.007 97.4)","oklch(95% 0.007 97.4)"]},
+      "ink": {"role":"neutral","displayName":"Near-black ink","tonalRamp":["oklch(15% 0.013 140.5)","oklch(26% 0.013 140.5)","oklch(38% 0.013 140.5)","oklch(49% 0.013 140.5)","oklch(61% 0.013 140.5)","oklch(72% 0.013 140.5)","oklch(84% 0.013 140.5)","oklch(95% 0.013 140.5)"]},
+      "muted": {"role":"neutral","displayName":"Muted ink","tonalRamp":["oklch(15% 0.016 135.0)","oklch(26% 0.016 135.0)","oklch(38% 0.016 135.0)","oklch(49% 0.016 135.0)","oklch(61% 0.016 135.0)","oklch(72% 0.016 135.0)","oklch(84% 0.016 135.0)","oklch(95% 0.016 135.0)"]},
+      "line": {"role":"neutral","displayName":"Fine rule","tonalRamp":["oklch(15% 0.017 118.2)","oklch(26% 0.017 118.2)","oklch(38% 0.017 118.2)","oklch(49% 0.017 118.2)","oklch(61% 0.017 118.2)","oklch(72% 0.017 118.2)","oklch(84% 0.017 118.2)","oklch(95% 0.017 118.2)"]},
+      "control-line": {"role":"neutral","displayName":"Control border","tonalRamp":["oklch(15% 0.023 131.6)","oklch(26% 0.023 131.6)","oklch(38% 0.023 131.6)","oklch(49% 0.023 131.6)","oklch(61% 0.023 131.6)","oklch(72% 0.023 131.6)","oklch(84% 0.023 131.6)","oklch(95% 0.023 131.6)"]},
+      "field": {"role":"neutral","displayName":"Field surface","tonalRamp":["oklch(15% 0.005 95.1)","oklch(26% 0.005 95.1)","oklch(38% 0.005 95.1)","oklch(49% 0.005 95.1)","oklch(61% 0.005 95.1)","oklch(72% 0.005 95.1)","oklch(84% 0.005 95.1)","oklch(95% 0.005 95.1)"]},
+      "action": {"role":"primary","displayName":"Forest action","tonalRamp":["oklch(15% 0.036 163.9)","oklch(26% 0.036 163.9)","oklch(38% 0.036 163.9)","oklch(49% 0.036 163.9)","oklch(61% 0.036 163.9)","oklch(72% 0.036 163.9)","oklch(84% 0.036 163.9)","oklch(95% 0.036 163.9)"]},
+      "on-action": {"role":"primary","displayName":"Action text","tonalRamp":["oklch(15% 0.007 115.7)","oklch(26% 0.007 115.7)","oklch(38% 0.007 115.7)","oklch(49% 0.007 115.7)","oklch(61% 0.007 115.7)","oklch(72% 0.007 115.7)","oklch(84% 0.007 115.7)","oklch(95% 0.007 115.7)"]},
+      "focus": {"role":"primary","displayName":"Focus ring","tonalRamp":["oklch(15% 0.047 165.8)","oklch(26% 0.047 165.8)","oklch(38% 0.047 165.8)","oklch(49% 0.047 165.8)","oklch(61% 0.047 165.8)","oklch(72% 0.047 165.8)","oklch(84% 0.047 165.8)","oklch(95% 0.047 165.8)"]},
+      "selection": {"role":"secondary","displayName":"Selection wash","tonalRamp":["oklch(15% 0.079 117.9)","oklch(26% 0.079 117.9)","oklch(38% 0.079 117.9)","oklch(49% 0.079 117.9)","oklch(61% 0.079 117.9)","oklch(72% 0.079 117.9)","oklch(84% 0.079 117.9)","oklch(95% 0.079 117.9)"]},
+      "selection-ink": {"role":"secondary","displayName":"Selected text","tonalRamp":["oklch(15% 0.025 158.9)","oklch(26% 0.025 158.9)","oklch(38% 0.025 158.9)","oklch(49% 0.025 158.9)","oklch(61% 0.025 158.9)","oklch(72% 0.025 158.9)","oklch(84% 0.025 158.9)","oklch(95% 0.025 158.9)"]},
+      "contact": {"role":"neutral","displayName":"Contact surface","tonalRamp":["oklch(15% 0.019 119.8)","oklch(26% 0.019 119.8)","oklch(38% 0.019 119.8)","oklch(49% 0.019 119.8)","oklch(61% 0.019 119.8)","oklch(72% 0.019 119.8)","oklch(84% 0.019 119.8)","oklch(95% 0.019 119.8)"]},
+      "sage": {"role":"secondary","displayName":"TawreedPlus sage","tonalRamp":["oklch(15% 0.023 137.2)","oklch(26% 0.023 137.2)","oklch(38% 0.023 137.2)","oklch(49% 0.023 137.2)","oklch(61% 0.023 137.2)","oklch(72% 0.023 137.2)","oklch(84% 0.023 137.2)","oklch(95% 0.023 137.2)"]},
+      "sand": {"role":"secondary","displayName":"Qaaf sand","tonalRamp":["oklch(15% 0.026 82.4)","oklch(26% 0.026 82.4)","oklch(38% 0.026 82.4)","oklch(49% 0.026 82.4)","oklch(61% 0.026 82.4)","oklch(72% 0.026 82.4)","oklch(84% 0.026 82.4)","oklch(95% 0.026 82.4)"]},
+      "lilac": {"role":"secondary","displayName":"PocketDeck lilac","tonalRamp":["oklch(15% 0.021 301.1)","oklch(26% 0.021 301.1)","oklch(38% 0.021 301.1)","oklch(49% 0.021 301.1)","oklch(61% 0.021 301.1)","oklch(72% 0.021 301.1)","oklch(84% 0.021 301.1)","oklch(95% 0.021 301.1)"]},
+      "hero-stage": {"role":"primary","displayName":"Forest stage","tonalRamp":["oklch(15% 0.051 175.2)","oklch(26% 0.051 175.2)","oklch(38% 0.051 175.2)","oklch(49% 0.051 175.2)","oklch(61% 0.051 175.2)","oklch(72% 0.051 175.2)","oklch(84% 0.051 175.2)","oklch(95% 0.051 175.2)"]},
+      "hero-plane": {"role":"primary","displayName":"Green backdrop plane","tonalRamp":["oklch(15% 0.060 172.5)","oklch(26% 0.060 172.5)","oklch(38% 0.060 172.5)","oklch(49% 0.060 172.5)","oklch(61% 0.060 172.5)","oklch(72% 0.060 172.5)","oklch(84% 0.060 172.5)","oklch(95% 0.060 172.5)"]},
+      "hero-text": {"role":"neutral","displayName":"Hero ivory","tonalRamp":["oklch(15% 0.009 113.2)","oklch(26% 0.009 113.2)","oklch(38% 0.009 113.2)","oklch(49% 0.009 113.2)","oklch(61% 0.009 113.2)","oklch(72% 0.009 113.2)","oklch(84% 0.009 113.2)","oklch(95% 0.009 113.2)"]},
+      "hero-muted": {"role":"neutral","displayName":"Muted hero text","tonalRamp":["oklch(15% 0.022 158.6)","oklch(26% 0.022 158.6)","oklch(38% 0.022 158.6)","oklch(49% 0.022 158.6)","oklch(61% 0.022 158.6)","oklch(72% 0.022 158.6)","oklch(84% 0.022 158.6)","oklch(95% 0.022 158.6)"]},
+      "hero-accent": {"role":"secondary","displayName":"Yellow-green hero accent","tonalRamp":["oklch(15% 0.073 112.8)","oklch(26% 0.073 112.8)","oklch(38% 0.073 112.8)","oklch(49% 0.073 112.8)","oklch(61% 0.073 112.8)","oklch(72% 0.073 112.8)","oklch(84% 0.073 112.8)","oklch(95% 0.073 112.8)"]},
+      "hero-accent-ink": {"role":"secondary","displayName":"Hero arrow ink","tonalRamp":["oklch(15% 0.039 136.6)","oklch(26% 0.039 136.6)","oklch(38% 0.039 136.6)","oklch(49% 0.039 136.6)","oklch(61% 0.039 136.6)","oklch(72% 0.039 136.6)","oklch(84% 0.039 136.6)","oklch(95% 0.039 136.6)"]},
+      "success": {"role":"secondary","displayName":"Success text","tonalRamp":["oklch(15% 0.079 152.5)","oklch(26% 0.079 152.5)","oklch(38% 0.079 152.5)","oklch(49% 0.079 152.5)","oklch(61% 0.079 152.5)","oklch(72% 0.079 152.5)","oklch(84% 0.079 152.5)","oklch(95% 0.079 152.5)"]},
+      "error": {"role":"secondary","displayName":"Error text","tonalRamp":["oklch(15% 0.144 26.1)","oklch(26% 0.144 26.1)","oklch(38% 0.144 26.1)","oklch(49% 0.144 26.1)","oklch(61% 0.144 26.1)","oklch(72% 0.144 26.1)","oklch(84% 0.144 26.1)","oklch(95% 0.144 26.1)"]},
+      "paper-dark": {"role":"neutral","displayName":"Warm paper (dark)","tonalRamp":["oklch(15% 0.012 156.2)","oklch(26% 0.012 156.2)","oklch(38% 0.012 156.2)","oklch(49% 0.012 156.2)","oklch(61% 0.012 156.2)","oklch(72% 0.012 156.2)","oklch(84% 0.012 156.2)","oklch(95% 0.012 156.2)"]},
+      "ink-dark": {"role":"neutral","displayName":"Near-black ink (dark)","tonalRamp":["oklch(15% 0.013 106.6)","oklch(26% 0.013 106.6)","oklch(38% 0.013 106.6)","oklch(49% 0.013 106.6)","oklch(61% 0.013 106.6)","oklch(72% 0.013 106.6)","oklch(84% 0.013 106.6)","oklch(95% 0.013 106.6)"]},
+      "muted-dark": {"role":"neutral","displayName":"Muted ink (dark)","tonalRamp":["oklch(15% 0.021 131.5)","oklch(26% 0.021 131.5)","oklch(38% 0.021 131.5)","oklch(49% 0.021 131.5)","oklch(61% 0.021 131.5)","oklch(72% 0.021 131.5)","oklch(84% 0.021 131.5)","oklch(95% 0.021 131.5)"]},
+      "line-dark": {"role":"neutral","displayName":"Fine rule (dark)","tonalRamp":["oklch(15% 0.022 155.1)","oklch(26% 0.022 155.1)","oklch(38% 0.022 155.1)","oklch(49% 0.022 155.1)","oklch(61% 0.022 155.1)","oklch(72% 0.022 155.1)","oklch(84% 0.022 155.1)","oklch(95% 0.022 155.1)"]},
+      "control-line-dark": {"role":"neutral","displayName":"Control border (dark)","tonalRamp":["oklch(15% 0.027 148.9)","oklch(26% 0.027 148.9)","oklch(38% 0.027 148.9)","oklch(49% 0.027 148.9)","oklch(61% 0.027 148.9)","oklch(72% 0.027 148.9)","oklch(84% 0.027 148.9)","oklch(95% 0.027 148.9)"]},
+      "field-dark": {"role":"neutral","displayName":"Field surface (dark)","tonalRamp":["oklch(15% 0.017 148.7)","oklch(26% 0.017 148.7)","oklch(38% 0.017 148.7)","oklch(49% 0.017 148.7)","oklch(61% 0.017 148.7)","oklch(72% 0.017 148.7)","oklch(84% 0.017 148.7)","oklch(95% 0.017 148.7)"]},
+      "action-dark": {"role":"primary","displayName":"Forest action (dark)","tonalRamp":["oklch(15% 0.069 115.7)","oklch(26% 0.069 115.7)","oklch(38% 0.069 115.7)","oklch(49% 0.069 115.7)","oklch(61% 0.069 115.7)","oklch(72% 0.069 115.7)","oklch(84% 0.069 115.7)","oklch(95% 0.069 115.7)"]},
+      "on-action-dark": {"role":"primary","displayName":"Action text (dark)","tonalRamp":["oklch(15% 0.034 141.5)","oklch(26% 0.034 141.5)","oklch(38% 0.034 141.5)","oklch(49% 0.034 141.5)","oklch(61% 0.034 141.5)","oklch(72% 0.034 141.5)","oklch(84% 0.034 141.5)","oklch(95% 0.034 141.5)"]},
+      "focus-dark": {"role":"primary","displayName":"Focus ring (dark)","tonalRamp":["oklch(15% 0.069 115.7)","oklch(26% 0.069 115.7)","oklch(38% 0.069 115.7)","oklch(49% 0.069 115.7)","oklch(61% 0.069 115.7)","oklch(72% 0.069 115.7)","oklch(84% 0.069 115.7)","oklch(95% 0.069 115.7)"]},
+      "contact-dark": {"role":"neutral","displayName":"Contact surface (dark)","tonalRamp":["oklch(15% 0.028 157.0)","oklch(26% 0.028 157.0)","oklch(38% 0.028 157.0)","oklch(49% 0.028 157.0)","oklch(61% 0.028 157.0)","oklch(72% 0.028 157.0)","oklch(84% 0.028 157.0)","oklch(95% 0.028 157.0)"]},
+      "sage-dark": {"role":"secondary","displayName":"TawreedPlus sage (dark)","tonalRamp":["oklch(15% 0.042 154.4)","oklch(26% 0.042 154.4)","oklch(38% 0.042 154.4)","oklch(49% 0.042 154.4)","oklch(61% 0.042 154.4)","oklch(72% 0.042 154.4)","oklch(84% 0.042 154.4)","oklch(95% 0.042 154.4)"]},
+      "sand-dark": {"role":"secondary","displayName":"Qaaf sand (dark)","tonalRamp":["oklch(15% 0.025 74.2)","oklch(26% 0.025 74.2)","oklch(38% 0.025 74.2)","oklch(49% 0.025 74.2)","oklch(61% 0.025 74.2)","oklch(72% 0.025 74.2)","oklch(84% 0.025 74.2)","oklch(95% 0.025 74.2)"]},
+      "lilac-dark": {"role":"secondary","displayName":"PocketDeck lilac (dark)","tonalRamp":["oklch(15% 0.039 299.0)","oklch(26% 0.039 299.0)","oklch(38% 0.039 299.0)","oklch(49% 0.039 299.0)","oklch(61% 0.039 299.0)","oklch(72% 0.039 299.0)","oklch(84% 0.039 299.0)","oklch(95% 0.039 299.0)"]},
+      "hero-stage-dark": {"role":"primary","displayName":"Forest stage (dark)","tonalRamp":["oklch(15% 0.051 171.2)","oklch(26% 0.051 171.2)","oklch(38% 0.051 171.2)","oklch(49% 0.051 171.2)","oklch(61% 0.051 171.2)","oklch(72% 0.051 171.2)","oklch(84% 0.051 171.2)","oklch(95% 0.051 171.2)"]},
+      "hero-plane-dark": {"role":"primary","displayName":"Green backdrop plane (dark)","tonalRamp":["oklch(15% 0.059 166.8)","oklch(26% 0.059 166.8)","oklch(38% 0.059 166.8)","oklch(49% 0.059 166.8)","oklch(61% 0.059 166.8)","oklch(72% 0.059 166.8)","oklch(84% 0.059 166.8)","oklch(95% 0.059 166.8)"]},
+      "success-dark": {"role":"secondary","displayName":"Success text (dark)","tonalRamp":["oklch(15% 0.095 146.5)","oklch(26% 0.095 146.5)","oklch(38% 0.095 146.5)","oklch(49% 0.095 146.5)","oklch(61% 0.095 146.5)","oklch(72% 0.095 146.5)","oklch(84% 0.095 146.5)","oklch(95% 0.095 146.5)"]},
+      "error-dark": {"role":"secondary","displayName":"Error text (dark)","tonalRamp":["oklch(15% 0.073 27.0)","oklch(26% 0.073 27.0)","oklch(38% 0.073 27.0)","oklch(49% 0.073 27.0)","oklch(61% 0.073 27.0)","oklch(72% 0.073 27.0)","oklch(84% 0.073 27.0)","oklch(95% 0.073 27.0)"]}
+    },
+    "typographyMeta": {
+      "display": {"displayName":"English display","purpose":"Homepage hero heading in English."},
+      "display-ar": {"displayName":"Arabic display","purpose":"Homepage hero heading in Arabic."},
+      "headline": {"displayName":"Section heading","purpose":"Homepage section headings and the contact heading."},
+      "title": {"displayName":"Project title","purpose":"Featured project names."},
+      "body": {"displayName":"English body","purpose":"Body text and form fields in English."},
+      "body-ar": {"displayName":"Arabic body","purpose":"Body text and form fields in Arabic."},
+      "label": {"displayName":"Project type","purpose":"Compact labels paired with project titles."},
+      "button": {"displayName":"Action label","purpose":"Text inside the primary and outlined actions."}
+    },
+    "shadows": [
+      {
+        "name": "device-shadow",
+        "value": "0 16px 32px rgb(13 28 22 / 25%)",
+        "purpose": "Under desktop and wide screenshots."
+      },
+      {
+        "name": "hero-phone",
+        "value": "drop-shadow(0 15px 16px rgb(5 19 14 / 35%))",
+        "purpose": "Around the lead phone silhouette."
+      },
+      {
+        "name": "work-phone",
+        "value": "drop-shadow(0 13px 12px rgb(13 24 18 / 22%))",
+        "purpose": "Around the phone silhouettes in work tiles and case artwork."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(.23, 1, .32, 1)",
+        "purpose": "Easing for screenshot lifts and button presses."
+      },
+      {
+        "name": "control-duration",
+        "value": "160ms",
+        "purpose": "Button movement and fill transitions."
+      },
+      {
+        "name": "screenshot-duration",
+        "value": "240ms",
+        "purpose": "Phone lift on project-link hover."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact",
+        "value": "55rem"
+      },
+      {
+        "name": "stacked",
+        "value": "45rem"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Filled pill for the main action.",
+      "html": "<a class=\"ds-action ds-action-primary\" href=\"#projects\">View my work<svg class=\"ds-arrow ds-arrow-down\" aria-hidden=\"true\" viewBox=\"0 0 16 16\" width=\"13\" height=\"13\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M1 8h13m-5-5 5 5-5 5\"/></svg></a>",
+      "css": ".ds-action { display: inline-flex; box-sizing: border-box; align-items: center; justify-content: center; gap: .75rem; min-block-size: 2.95rem; padding: .65rem 1.15rem; border: 1px solid transparent; border-radius: 2rem; font: 700 1rem/1.25 var(--font-body); text-decoration: none; transition: transform 160ms var(--ease-out), background-color 160ms ease; }\n.ds-action:active:not(:disabled) { transform: scale(.97); }\n.ds-action:disabled { opacity: .7; cursor: wait; }\n.ds-action:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }\n@media (prefers-reduced-motion: reduce) { .ds-action { transition: none; } .ds-action:active:not(:disabled) { transform: none; } }\n.ds-arrow { flex: 0 0 .82rem; inline-size: .82rem; block-size: .82rem; }\n.ds-arrow-down { rotate: 90deg; }\n:dir(rtl) .ds-arrow-inline { rotate: 180deg; }\n.ds-action-primary { color: var(--on-action); background: var(--action); }\n.ds-action-primary:hover:not(:disabled) { background: color-mix(in srgb, var(--action), var(--on-action) 12%); }"
+    },
+    {
+      "name": "Outline action",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Outlined pill for secondary actions and product links.",
+      "html": "<a class=\"ds-action ds-action-outline\" href=\"#contact\">Get in touch</a>",
+      "css": ".ds-action { display: inline-flex; box-sizing: border-box; align-items: center; justify-content: center; gap: .75rem; min-block-size: 2.95rem; padding: .65rem 1.15rem; border: 1px solid transparent; border-radius: 2rem; font: 700 1rem/1.25 var(--font-body); text-decoration: none; transition: transform 160ms var(--ease-out), background-color 160ms ease; }\n.ds-action:active:not(:disabled) { transform: scale(.97); }\n.ds-action:disabled { opacity: .7; cursor: wait; }\n.ds-action:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }\n@media (prefers-reduced-motion: reduce) { .ds-action { transition: none; } .ds-action:active:not(:disabled) { transform: none; } }\n.ds-action-outline { color: var(--ink); border-color: var(--line); }\n.ds-action-outline:hover { background: var(--field); }"
+    },
+    {
+      "name": "Copy button",
+      "kind": "button",
+      "refersTo": "button-copy",
+      "description": "Compact action alongside the contact email.",
+      "html": "<button type=\"button\" class=\"ds-copy\" aria-label=\"Copy email address\">Copy</button>",
+      "css": ".ds-copy { box-sizing: border-box; min-block-size: 2.75rem; padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 2rem; color: var(--ink); background: transparent; font: 400 1rem/1.65 var(--font-body); cursor: pointer; }\n.ds-copy:hover { background: var(--field); }\n.ds-copy:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }"
+    },
+    {
+      "name": "Contact fields",
+      "kind": "input",
+      "refersTo": "contact-field",
+      "description": "Labeled text field and resizable message area.",
+      "html": "<div class=\"ds-fields\"><label class=\"ds-field\">Your name<input dir=\"auto\" autocomplete=\"name\" required></label><label class=\"ds-field\">Your message<textarea dir=\"auto\" rows=\"4\" required></textarea></label></div>",
+      "css": ".ds-fields { display: grid; gap: .95rem; }\n.ds-field { display: grid; gap: .25rem; color: var(--ink); font: 700 1rem/1.65 var(--font-body); }\n.ds-field input, .ds-field textarea { box-sizing: border-box; inline-size: 100%; min-block-size: 2.8rem; padding: .65rem .8rem; border: 1px solid var(--control-line); border-radius: .65rem; color: var(--ink); background: var(--field); caret-color: var(--focus); font: 400 1rem/1.65 var(--font-body); }\n.ds-field textarea { resize: vertical; }\n.ds-field input:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }\n.ds-field textarea:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }"
+    },
+    {
+      "name": "Site navigation",
+      "kind": "nav",
+      "refersTo": "site-navigation",
+      "description": "Shared text navigation on the homepage and case studies.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"#projects\">Work</a><a href=\"#craft\">About</a><a href=\"#contact\">Contact</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: clamp(1rem, 3vw, 2.25rem); }\n.ds-nav a { display: grid; place-items: center; min-block-size: 2.75rem; white-space: nowrap; color: var(--muted); font: 400 .95rem/1.65 var(--font-body); text-decoration: underline transparent; text-underline-offset: .27em; }\n.ds-nav a:hover { color: var(--ink); text-decoration-color: currentColor; }\n.ds-nav a:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }\n@media (max-width: 45rem) { .ds-nav { justify-content: space-between; gap: .7rem; } }"
+    },
+    {
+      "name": "Lead project preview",
+      "kind": "card",
+      "refersTo": "lead-project",
+      "description": "Overlapping TawreedPlus desktop and phone screenshots link to the case study.",
+      "html": "<a class=\"ds-lead\" href=\"project.html?id=tawreedplus\"><div class=\"ds-lead-art\" aria-hidden=\"true\"><img class=\"ds-lead-desktop\" src=\"assets/images/showcase/tawreed-web.webp\" width=\"1280\" height=\"720\" alt=\"\"><img class=\"ds-lead-phone\" src=\"assets/images/showcase/tawreed-app-2.webp\" width=\"810\" height=\"1635\" alt=\"\"></div><div class=\"ds-lead-caption\"><div><strong>TawreedPlus</strong><span>B2B procurement platform</span></div><span class=\"ds-round-arrow\" aria-hidden=\"true\"><svg class=\"ds-arrow ds-arrow-inline\" aria-hidden=\"true\" viewBox=\"0 0 16 16\" width=\"13\" height=\"13\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M1 8h13m-5-5 5 5-5 5\"/></svg></span></div></a>",
+      "css": ".ds-lead { display: block; overflow: hidden; border-radius: var(--surface-radius); color: var(--hero-text); background: var(--hero-stage); font: 400 1rem/1.65 var(--font-body); text-decoration: none; }\n.ds-lead-art { position: relative; isolation: isolate; overflow: hidden; aspect-ratio: 1.56; }\n.ds-lead-art::before { position: absolute; z-index: -1; inset: 14% auto auto 34%; inline-size: 82%; aspect-ratio: 1; border-radius: 50%; background: var(--hero-plane); content: \"\"; }\n.ds-lead-desktop, .ds-lead-phone { position: absolute; display: block; block-size: auto; }\n.ds-lead-desktop { inset-block-start: 19%; inset-inline-start: 8%; inline-size: 79%; border: 1px solid rgb(255 255 255 / 22%); border-radius: .52rem; box-shadow: var(--device-shadow); }\n.ds-lead-phone { inset-block-start: 14%; inset-inline-end: 9%; inline-size: 25%; filter: drop-shadow(0 15px 16px rgb(5 19 14 / 35%)); transition: transform 240ms var(--ease-out); }\n.ds-lead:hover .ds-lead-phone { transform: translateY(-.35rem); }\n.ds-lead-caption { display: flex; box-sizing: border-box; align-items: center; justify-content: space-between; gap: 1rem; min-block-size: 4.65rem; margin-inline: 1.25rem; padding-block: .65rem; border-block-start: 1px solid rgb(255 255 255 / 22%); }\n.ds-lead-caption strong, .ds-lead-caption div span { display: block; }\n.ds-lead-caption strong { font-size: 1.13rem; }\n.ds-lead-caption div span { color: var(--hero-muted); font-size: .88rem; }\n.ds-round-arrow { display: inline-grid; box-sizing: border-box; flex: 0 0 2.65rem; place-items: center; inline-size: 2.65rem; block-size: 2.65rem; border: 1px solid var(--line); border-radius: 50%; transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease; }\n.ds-lead-caption .ds-round-arrow { color: var(--hero-accent-ink); background: var(--hero-accent); border-color: var(--hero-accent); }\n.ds-arrow { flex: 0 0 .82rem; inline-size: .82rem; block-size: .82rem; }\n.ds-arrow-down { rotate: 90deg; }\n:dir(rtl) .ds-arrow-inline { rotate: 180deg; }\n.ds-lead:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }\n@media (max-width: 45rem) { .ds-lead-caption { min-block-size: 3.95rem; margin-inline: .9rem; } }\n@media (prefers-reduced-motion: reduce) { .ds-lead-phone, .ds-lead-caption .ds-round-arrow { transition: none; } .ds-lead:hover .ds-lead-phone { transform: none; } }"
+    },
+    {
+      "name": "Selected work tile",
+      "kind": "card",
+      "refersTo": "work-art-qaaf",
+      "description": "Product-specific artwork links to a case study with a concise caption.",
+      "html": "<a class=\"ds-work\" href=\"project.html?id=qaaf\"><div class=\"ds-work-art\" aria-hidden=\"true\"><img class=\"ds-work-phone ds-work-leading\" src=\"assets/images/showcase/qaaf-browse.webp\" alt=\"\"><img class=\"ds-work-phone ds-work-trailing\" src=\"assets/images/showcase/qaaf-player.webp\" alt=\"\"></div><div class=\"ds-work-info\"><div><h3>Qaaf</h3><p class=\"ds-work-type\">Mobile app · Digital media</p><p>A Quranic media app with offline listening and verse repeat for memorization.</p></div><span class=\"ds-round-arrow\" aria-hidden=\"true\"><svg class=\"ds-arrow ds-arrow-inline\" aria-hidden=\"true\" viewBox=\"0 0 16 16\" width=\"13\" height=\"13\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M1 8h13m-5-5 5 5-5 5\"/></svg></span></div></a>",
+      "css": ".ds-work { display: flex; flex-direction: column; color: var(--ink); font: 400 1rem/1.65 var(--font-body); text-decoration: none; }\n.ds-work-art { position: relative; isolation: isolate; overflow: hidden; aspect-ratio: 1.62; border-radius: var(--surface-radius); background: var(--sand); }\n.ds-work-phone { position: absolute; display: block; inline-size: 25%; block-size: auto; filter: drop-shadow(0 13px 12px rgb(13 24 18 / 22%)); transition: transform 240ms var(--ease-out); }\n.ds-work-leading { inset-block-start: 11%; inset-inline-start: 23%; }\n.ds-work-trailing { z-index: -1; inset-block-start: 22%; inset-inline-end: 24%; }\n.ds-work:hover .ds-work-leading { transform: translateY(-.3rem); }\n.ds-work-info { display: flex; justify-content: space-between; gap: .85rem; padding-block-start: 1rem; }\n.ds-work-info h3 { margin: 0; font-size: clamp(1.6rem, 2.5vw, 2.35rem); line-height: 1.25; }\n.ds-work-info p { margin: .35rem 0 0; color: var(--muted); }\n.ds-work-type { font-size: .86rem; font-weight: 700; }\n.ds-round-arrow { display: inline-grid; box-sizing: border-box; flex: 0 0 2.65rem; place-items: center; inline-size: 2.65rem; block-size: 2.65rem; border: 1px solid var(--line); border-radius: 50%; transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease; }\n.ds-work:hover .ds-round-arrow { color: var(--on-action); background: var(--action); border-color: var(--action); }\n.ds-arrow { flex: 0 0 .82rem; inline-size: .82rem; block-size: .82rem; }\n.ds-arrow-down { rotate: 90deg; }\n:dir(rtl) .ds-arrow-inline { rotate: 180deg; }\n.ds-work:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }\n@media (prefers-reduced-motion: reduce) { .ds-work-phone, .ds-work .ds-round-arrow { transition: none; } .ds-work:hover .ds-work-leading { transform: none; } }"
+    },
+    {
+      "name": "Project archive disclosure",
+      "kind": "custom",
+      "refersTo": "project-disclosure",
+      "description": "Native disclosure for projects outside the selected work grid.",
+      "html": "<details class=\"ds-archive\"><summary>More projects<span class=\"ds-chevron\" aria-hidden=\"true\"></span></summary><a href=\"project.html?id=askurdr\"><strong>AskUrDr</strong><span>Mobile app · Telehealth</span></a></details>",
+      "css": ".ds-archive { border-block-start: 1px solid var(--line); color: var(--ink); font: 400 1rem/1.65 var(--font-body); }\n.ds-archive summary, .ds-archive a { display: flex; box-sizing: border-box; align-items: center; justify-content: space-between; gap: 1rem; min-block-size: 3.5rem; }\n.ds-archive summary { list-style: none; font-weight: 700; cursor: pointer; }\n.ds-archive summary::-webkit-details-marker { display: none; }\n.ds-chevron { inline-size: .72rem; block-size: .72rem; margin-inline-end: .2rem; border-block-end: 1.5px solid currentColor; border-inline-end: 1.5px solid currentColor; rotate: 45deg; }\n:dir(rtl) .ds-chevron { rotate: -45deg; }\n.ds-archive[open] .ds-chevron { rotate: -135deg; }\n.ds-archive[open]:dir(rtl) .ds-chevron { rotate: 135deg; }\n.ds-archive a { flex-wrap: wrap; column-gap: 1.25rem; row-gap: .2rem; padding-block: .75rem; border-block-start: 1px solid var(--line); color: inherit; text-decoration: none; }\n.ds-archive a span { color: var(--muted); font-size: .9rem; }\n.ds-archive a:hover strong { text-decoration: underline; text-underline-offset: .25em; }\n.ds-archive summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }\n.ds-archive a:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }"
+    },
+    {
+      "name": "Gallery screenshot",
+      "kind": "card",
+      "refersTo": "gallery-image",
+      "description": "Lightly framed screenshot links to its source image.",
+      "html": "<a class=\"ds-shot\" href=\"assets/images/showcase/tawreed-app-1.webp\" aria-label=\"Open screenshot 1 · TawreedPlus\"><img src=\"assets/images/showcase/tawreed-app-1.webp\" alt=\"\"></a>",
+      "css": ".ds-shot { display: grid; place-items: center; border: 1px solid var(--line); border-radius: 1rem; padding: clamp(.45rem, 1.5vw, 1.05rem); background: var(--field); text-decoration: none; }\n.ds-shot img { display: block; inline-size: 100%; block-size: min(65vw, 24rem); object-fit: contain; }\n.ds-shot:hover { border-color: var(--focus); }\n.ds-shot:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Product Showcase",
+    "overview": "Real product screenshots carry the portfolio. Warm paper, near-black ink, and forest green frame the work. Oversized headings and fine rules organize concise engineering descriptions in both languages.",
+    "keyCharacteristics": [
+      "Real product interfaces in their source direction.",
+      "Arabic RTL and English LTR layouts with equivalent hierarchy.",
+      "Quiet surfaces, with depth reserved for overlapping screenshots."
+    ],
+    "rules": [],
+    "dos": [
+      "Do keep project artwork sourced from the product itself.",
+      "Do use logical CSS properties so both languages share the same layout.",
+      "Do respect reduced motion for smooth scrolling, screenshot lifts, and button presses."
+    ],
+    "donts": []
+  }
+}

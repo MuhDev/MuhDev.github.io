@@ -53,11 +53,11 @@ const portfolioData = {
       tagline: { ar: "تحويل الهاتف إلى وحدة تحكم ذكية Stream Deck وميكسر صوت وكنترول OBS للويندوز", en: "Stream Deck, per-app audio mixer, and OBS cockpit companion surface for Windows" },
       logo: "assets/images/projects/pocketdeck-logo.png",
       preview: [
-        "assets/images/projects/pocketdeck-1.png",
-        "assets/images/projects/pocketdeck-2.png",
-        "assets/images/projects/pocketdeck-3.png"
+        "assets/images/showcase/pocketdeck-deck.webp",
+        "assets/images/showcase/pocketdeck-mixer.webp",
+        "assets/images/showcase/pocketdeck-obs.webp"
       ],
-      layout: "landscape",
+      layout: "phone",
       date: "2026",
       badge: { ar: "مفتوح المصدر", en: "Open Source" },
       description: {
@@ -69,11 +69,9 @@ const portfolioData = {
         { type: "github", url: "https://github.com/MuhDev/pocketdeck", label: { ar: "مستودع المشروع على GitHub", en: "GitHub (Open Source)" } }
       ],
       gallery: [
-        "assets/images/apps-images/pocketdeck-1.png",
-        "assets/images/apps-images/pocketdeck-4.png",
-        "assets/images/apps-images/pocketdeck-2.png",
-        "assets/images/apps-images/pocketdeck-5.png",
-        "assets/images/apps-images/pocketdeck-3.png"
+        { src: "assets/images/showcase/pocketdeck-deck.webp", width: 425, height: 921, label: { ar: "لوحة التحكّم", en: "Control deck" } },
+        { src: "assets/images/showcase/pocketdeck-mixer.webp", width: 430, height: 932, label: { ar: "مِزج الصوت", en: "Audio mixer" } },
+        { src: "assets/images/showcase/pocketdeck-obs.webp", width: 425, height: 921, label: { ar: "التحكّم في OBS", en: "OBS controls" } }
       ]
     },
     {
@@ -82,9 +80,9 @@ const portfolioData = {
       tagline: { ar: "منصة توريد B2B لقطاع الضيافة والمطاعم والتجزئة بالمملكة", en: "B2B Supply Chain & Wholesale Marketplace Platform" },
       logo: "assets/images/projects/tawreedplus-logo.png",
       preview: [
-        "assets/images/projects/TawreedPlus-1.png",
-        "assets/images/projects/TawreedPlus-2.png",
-        "assets/images/projects/TawreedPlus-3.png"
+        "assets/images/showcase/tawreed-app-1.webp",
+        "assets/images/showcase/tawreed-app-2.webp",
+        "assets/images/showcase/tawreed-app-3.webp"
       ],
       date: "2025 - Present",
       description: {
@@ -97,11 +95,11 @@ const portfolioData = {
         { type: "googleplay", url: "https://play.google.com/store/apps/details?id=com.tawreedplus.store", label: "Google Play" }
       ],
       gallery: [
-        "assets/images/apps-images/TawreedPlus-1.png",
-        "assets/images/apps-images/TawreedPlus-2.png",
-        "assets/images/apps-images/TawreedPlus-3.png",
-        "assets/images/apps-images/TawreedPlus-4.png",
-        "assets/images/apps-images/TawreedPlus-5.png"
+        "assets/images/showcase/tawreed-app-1.webp",
+        "assets/images/showcase/tawreed-app-2.webp",
+        "assets/images/showcase/tawreed-app-3.webp",
+        "assets/images/showcase/tawreed-app-4.webp",
+        "assets/images/showcase/tawreed-app-5.webp"
       ]
     },
     {
@@ -110,9 +108,9 @@ const portfolioData = {
       tagline: { ar: "تطبيق سائقي الأسطول لإدارة وتوجيه الشحنات وإثبات التسليم الفوري", en: "Real-Time Fleet Routing, Delivery Dispatch & Digital POD" },
       logo: "assets/images/projects/tawreedplus-driver-logo.png",
       preview: [
-        "assets/images/projects/TawreedPlus Driver-1.png",
-        "assets/images/projects/TawreedPlus Driver-2.png",
-        "assets/images/projects/TawreedPlus Driver-3.png"
+        "assets/images/showcase/tawreed-driver-1.webp",
+        "assets/images/showcase/tawreed-driver-2.webp",
+        "assets/images/showcase/tawreed-driver-3.webp"
       ],
       date: "2025 - Present",
       description: {
@@ -124,9 +122,10 @@ const portfolioData = {
         { type: "googleplay", url: "https://play.google.com/store/apps/details?id=com.tawreedplus.driver", label: "Google Play" }
       ],
       gallery: [
-        "assets/images/apps-images/TawreedPlus Driver-1.jpg",
-        "assets/images/apps-images/TawreedPlus Driver-2.jpg",
-        "assets/images/apps-images/TawreedPlus Driver-3.jpg"
+        "assets/images/showcase/tawreed-driver-1.webp",
+        "assets/images/showcase/tawreed-driver-2.webp",
+        "assets/images/showcase/tawreed-driver-3.webp",
+        "assets/images/showcase/tawreed-driver-4.webp"
       ]
     },
     {
@@ -136,7 +135,7 @@ const portfolioData = {
       logo: "assets/images/projects/tawreedplus-logo.png",
       preview: [
         "assets/images/projects/tawreedplus-web-1.png",
-        "assets/images/projects/tawreedplus-web-2.png",
+        "assets/images/showcase/tawreed-product.webp",
         "assets/images/projects/tawreedplus-web-3.png",
         "assets/images/projects/tawreedplus-web-4.png"
       ],
@@ -153,7 +152,7 @@ const portfolioData = {
       ],
       gallery: [
         "assets/images/apps-images/tawreedplus-web-1.png",
-        "assets/images/apps-images/tawreedplus-web-2.png",
+        { src: "assets/images/showcase/tawreed-product.webp", width: 1275, height: 790, label: { ar: "تفاصيل المنتج", en: "Product details" } },
         "assets/images/apps-images/tawreedplus-web-3.png",
         "assets/images/apps-images/tawreedplus-web-4.png"
       ]
@@ -179,13 +178,9 @@ const portfolioData = {
         { type: "googleplay", url: "https://play.google.com/store/apps/details?id=com.cliffex.qaaf&hl=ar", label: "Google Play" }
       ],
       gallery: [
-        "https://i.ibb.co/dMpGVmd/1.png",
-        "https://i.ibb.co/j6hwsmN/2.png",
-        "https://i.ibb.co/fHDrf93/3.png",
-        "https://i.ibb.co/hKFHJm9/4.png",
-        "https://i.ibb.co/vxQ6rBJ/5.png",
-        "https://i.ibb.co/4MPw862/6.png",
-        "https://i.ibb.co/rF6yhbX/7.png"
+        "assets/images/showcase/qaaf-browse.webp",
+        "assets/images/showcase/qaaf-player.webp",
+        "assets/images/projects/Qaff-7.png"
       ]
     },
     {
@@ -209,11 +204,9 @@ const portfolioData = {
         { type: "googleplay", url: "https://play.google.com/store/apps/details?id=com.askurdr.doctors", label: "Google Play" }
       ],
       gallery: [
-        "https://i.ibb.co/zrTWJNd/1.png",
-        "https://i.ibb.co/7k9FWp6/2.png",
-        "https://i.ibb.co/fvLwzCh/3.png",
-        "https://i.ibb.co/M8NrGWj/4.png",
-        "https://i.ibb.co/YyXFrMz/5.png"
+        "assets/images/projects/AskUrDr-1.png",
+        "assets/images/projects/AskUrDr-2.png",
+        "assets/images/projects/AskUrDr-3.png"
       ]
     },
     {
@@ -236,11 +229,8 @@ const portfolioData = {
         { type: "googleplay", url: "https://play.google.com/store/apps/details?id=com.fancy.technologies.cashbackapp", label: "Google Play" }
       ],
       gallery: [
-        "https://i.ibb.co/Z8r09tJ/1.png",
-        "https://i.ibb.co/k1g78kP/2.png",
-        "https://i.ibb.co/zGhnb38/3.png",
-        "https://i.ibb.co/sbkRX8W/4.png",
-        "https://i.ibb.co/b6fqgcr/5.png"
+        "assets/images/projects/CashBack-1.png",
+        "assets/images/projects/CashBack-2.png"
       ]
     },
     {
@@ -264,96 +254,11 @@ const portfolioData = {
         { type: "googleplay", url: "https://play.google.com/store/apps/details?id=sa.org.makarem&hl=ar", label: "Google Play" }
       ],
       gallery: [
-        "https://i.ibb.co/K2D37K6/1.png",
-        "https://i.ibb.co/s9MDB44/2.png",
-        "https://i.ibb.co/nDHjppD/3.png",
-        "https://i.ibb.co/BySQB2b/4.png"
+        "assets/images/projects/Makarem-1.png",
+        "assets/images/projects/Makarem-2.png",
+        "assets/images/projects/Makarem-3.png"
       ]
     }
-  ],
-
-  bentoCraft: [
-    {
-      id: "mobile-craft",
-      size: "large",
-      icon: "fas fa-mobile-screen",
-      title: {
-        ar: "تطوير تطبيقات جوال احترافية",
-        en: "Production-Grade Mobile Engineering"
-      },
-      desc: {
-        ar: "بناء تطبيقات iOS و Android سريعة ومستقرة باستخدام Flutter والتقنيات الأصلية، مع تطبيق معمارية Clean Architecture لضمان سهولة الصيانة وقابلية التوسع مستقبلاً.",
-        en: "Building responsive, rock-solid iOS & Android applications with Flutter & native toolkits. Implementing Clean Architecture (Domain, Data, and Presentation layers) to ensure bulletproof testability, maintainability, and scalability."
-      },
-      tags: ["Flutter", "Dart", "Clean Architecture", "BLoC & Riverpod", "Swift / Kotlin", "Offline-First", "CI/CD"]
-    },
-    {
-      id: "uiux-craft",
-      size: "medium",
-      icon: "fas fa-compass-drafting",
-      title: {
-        ar: "تصميم واجهات وتجربة مستخدم متقنة",
-        en: "UI/UX Craft & Micro-interactions"
-      },
-      desc: {
-        ar: "فهم عميق لمعايير Apple HIG و Material 3. تحويل تصاميم Figma إلى واجهات تفاعلية مريحة وسلسة تتجاوب بدقة مع حركات وتفاعلات المستخدم.",
-        en: "Adherence to Apple HIG and Google Material Design. Translating Figma design systems into living, breathing mobile interfaces with polished gesture physics."
-      },
-      tags: ["Figma", "Design Systems", "Apple HIG", "Micro-interactions", "Accessibility"]
-    },
-    {
-      id: "backend-cloud",
-      size: "half",
-      icon: "fas fa-cloud-bolt",
-      title: {
-        ar: "سيرفرات سحابية وتكامل للأنظمة",
-        en: "Cloud Infrastructure & APIs"
-      },
-      desc: {
-        ar: "ربط سلس مع Firebase، وقواعد البيانات، وبوابات الدفع الإلكتروني المعتمدة بالسعودية مثل HyperPay، مع توظيف تقنيات الذكاء الاصطناعي لأتمتة العمليات.",
-        en: "Seamless integration with Firebase, SQL/NoSQL databases, RESTful/GraphQL APIs, payment gateways (HyperPay), and AI agent workflows."
-      },
-      tags: ["Firebase", "REST APIs", "HyperPay", "SQL / NoSQL", "AI Agents"]
-    },
-    {
-      id: "work-mode",
-      size: "half",
-      icon: "fas fa-globe",
-      title: {
-        ar: "مرونة في العمل والتعاون الفعّال",
-        en: "Global Availability & Agility"
-      },
-      desc: {
-        ar: "مرونة عالية في العمل عن بُعد والتعاون مع الشركات وفرق التطوير في المملكة والخليج وعالمياً، وفق منهجيات Agile وتسليم دقيق بالموعد.",
-        en: "Available for remote contracts, full-time engineering roles, and startup partnerships across Saudi Arabia, the GCC, and globally."
-      },
-      tags: ["Remote Work", "Agile / Scrum", "Git / GitHub", "Fast Turnaround"]
-    }
-  ],
-
-  sphereSkills: [
-    { name: "Flutter", icon: "assets/svg/flutter.svg", isImg: true, color: "#02569B", category: "mobile" },
-    { name: "Dart", icon: "fas fa-code", isImg: false, color: "#0175C2", category: "mobile" },
-    { name: "Swift / iOS", icon: "fab fa-apple", isImg: false, color: "#F05138", category: "mobile" },
-    { name: "Kotlin / Android", icon: "fab fa-android", isImg: false, color: "#7F52FF", category: "mobile" },
-    { name: "BLoC & Cubit", icon: "fas fa-cubes", isImg: false, color: "#6366F1", category: "mobile" },
-    { name: "Riverpod", icon: "fas fa-water", isImg: false, color: "#3B82F6", category: "mobile" },
-    { name: "Clean Architecture", icon: "fas fa-layer-group", isImg: false, color: "#A855F7", category: "arch" },
-    { name: "Figma", icon: "fab fa-figma", isImg: false, color: "#F24E1E", category: "design" },
-    { name: "UI/UX Systems", icon: "fas fa-swatchbook", isImg: false, color: "#EC4899", category: "design" },
-    { name: "Apple HIG", icon: "fab fa-app-store-ios", isImg: false, color: "#FFFFFF", colorLight: "#1D1D1F", category: "design" },
-    { name: "Firebase", icon: "fas fa-fire", isImg: false, color: "#FFCA28", colorLight: "#D97706", category: "backend" },
-    { name: "REST APIs", icon: "fas fa-network-wired", isImg: false, color: "#10B981", colorLight: "#059669", category: "backend" },
-    { name: "HyperPay", icon: "fas fa-credit-card", isImg: false, color: "#00A859", category: "backend" },
-    { name: "SQL & SQLite", icon: "fas fa-database", isImg: false, color: "#38BDF8", colorLight: "#0284C7", category: "backend" },
-    { name: "NoSQL / Hive", icon: "fas fa-leaf", isImg: false, color: "#47A248", category: "backend" },
-    { name: "Git", icon: "fab fa-git-alt", isImg: false, color: "#F05032", category: "tools" },
-    { name: "GitHub", icon: "fab fa-github", isImg: false, color: "#F0F6FC", colorLight: "#181717", category: "tools" },
-    { name: "AI Agents", icon: "fas fa-robot", isImg: false, color: "#8B5CF6", category: "arch" },
-    { name: "Docker", icon: "fab fa-docker", isImg: false, color: "#2496ED", category: "tools" },
-    { name: "CI/CD & Fastlane", icon: "fas fa-gears", isImg: false, color: "#00F299", colorLight: "#047857", category: "tools" },
-    { name: "Python", icon: "fab fa-python", isImg: false, color: "#38BDF8", colorLight: "#1D4ED8", category: "backend" },
-    { name: "WebSockets", icon: "fas fa-bolt", isImg: false, color: "#EC4899", category: "backend" }
   ],
 
   skills: [
@@ -424,125 +329,124 @@ const portfolioData = {
       },
       link: "https://coursera.org/share/11ac79d580c6cc1cf4341e305f6995e2"
     }
-  ],
+  ]
+};
 
-  i18nDict: {
-    ar: {
-      navHome: "الرئيسية",
-      navCraft: "الحِرفية",
-      navProjects: "الأعمال",
-      navSkills: "المهارات",
-      navEducation: "التعليم",
-      navContact: "تواصل معي",
-      heroExploreBtn: "تصفح أعمالي",
-      heroContactBtn: "ابدأ محادثة",
-      craftBadge: "الرؤية والأسلوب",
-      craftTitle: "بين دقة الكود وإتقان التجربة",
-      craftSubtitle: "لا نبني مجرد تطبيقات، بل نصنع تجارب رقمية سريعة، موثوقة، ومصممة بأعلى معايير الإتقان والجودة.",
-      projectsBadge: "سجل الأعمال",
-      projectsTitle: "مشاريع وتطبيقات مختارة",
-      projectsSubtitle: "نماذج من التطبيقات المنشورة على المتاجر التي قمت بتطويرها وهندستها وفق أعلى معايير الأداء والاعتمادية.",
-      viewDetailsBtn: "تفاصيل المشروع",
-      skillsBadge: "الترسانة التقنية",
-      skillsTitle: "المهارات والتقنيات",
-      skillsSubtitle: "كرة تفاعلية ثلاثية الأبعاد تعرض التقنيات والأدوات التي أعتمد عليها في بناء المشاريع. اسحب الكرة واستكشف التفاصيل.",
-      skillsFilterAll: "الكل",
-      skillsFilterMobile: "تطوير الجوال",
-      skillsFilterDesign: "تصميم الواجهات",
-      skillsFilterBackend: "السحابة والباك إند",
-      skillsFilterTools: "الأدوات والمعمارية",
-      sphereHint: "اسحب لتدوير كرة المهارات واستكشاف التقنيات",
-      marqueeHeading: "تقنيات ومكتبات إضافية أعتمد عليها في عملي اليومي",
-      educationBadge: "المسار الأكاديمي",
-      educationTitle: "الشهادات والتعليم",
-      educationSubtitle: "أساس أكاديمي راسخ في هندسة البرمجيات، مقترن بالتطوير المستمر لأحدث تقنيات الذكاء الاصطناعي.",
-      viewCertBtn: "التحقق من الشهادة",
-      contactBadge: "لنبدأ العمل معاً",
-      contactTitle: "جاهز لإطلاق مشروعك القادم؟",
-      contactSubtitle: "سواء كانت لديك فكرة تطبيق جديدة أو تبحث عن مهندس متمرس للانضمام لفريقك، يسعدني التحدث معك ومناقشة التفاصيل.",
-      contactDirectHeading: "قنوات التواصل المباشر",
-      contactDirectDesc: "متاح دائماً لمناقشة أفكار وتطبيقات جديدة وتقديم حلول تقنية وتصميمية متكاملة.",
-      contactWhatsappTitle: "محادثة واتساب",
-      contactWhatsappSub: "رد سريع ومباشر",
-      contactPhoneTitle: "اتصال هاتفي",
-      contactPhoneSub: "متاح للمكالمات",
-      contactEmailTitle: "البريد الإلكتروني",
-      contactEmailSub: "انقر لنسخ البريد",
-      copiedToastPhone: "تم نسخ رقم الهاتف بنجاح!",
-      contactAvailability: "رد سريع • الرياض، السعودية 🇸🇦",
-      copyEmail: "نسخ البريد الإلكتروني",
-      copiedToast: "تم نسخ البريد الإلكتروني بنجاح!",
-      formNamePlaceholder: "الاسم الكريم",
-      formEmailPlaceholder: "البريد الإلكتروني",
-      formMsgPlaceholder: "أخبرني عن مشروعك، فكرتك، أو استفسارك...",
-      formSubmitBtn: "إرسال الرسالة",
-      formSending: "جارٍ الإرسال...",
-      formSuccess: "تم استلام رسالتك بنجاح! سأتواصل معك قريباً.",
-      formError: "حدث خطأ أثناء الإرسال. يمكنك مراسلتي مباشرة عبر البريد الإلكتروني أو الواتساب.",
-      rightsReserved: "جميع الحقوق محفوظة.",
-      backToTop: "للأعلى"
+// Short summaries and artwork used by the work index and case studies.
+const projectPresentation = {
+  tawreedplus: {
+    name: { ar: "توريد بلس", en: "TawreedPlus" },
+    type: { ar: "تطبيق جوال · تطبيق سائقين · متجر ويب", en: "Mobile app · Driver app · Web store" },
+    summary: {
+      ar: "منصة تربط مشتريات المنشآت بتوصيل الطلبات ومتابعتها.",
+      en: "A procurement platform connecting business orders with fleet delivery and tracking."
     },
-    en: {
-      navHome: "Home",
-      navCraft: "Craft",
-      navProjects: "Projects",
-      navSkills: "Skills",
-      navEducation: "Education",
-      navContact: "Contact",
-      heroExploreBtn: "Explore Projects",
-      heroContactBtn: "Let's Talk",
-      craftBadge: "Philosophy & Craft",
-      craftTitle: "Engineering Meets Product Taste",
-      craftSubtitle: "Bridging the gap between ambitious product design and resilient, production-ready code.",
-      projectsBadge: "Featured Work",
-      projectsTitle: "Shipped Applications",
-      projectsSubtitle: "A curated collection of live apps built for scale, performance, and delightful usability.",
-      viewDetailsBtn: "Case Study",
-      skillsBadge: "Tech Stack",
-      skillsTitle: "Skills & Capabilities",
-      skillsSubtitle: "An interactive 3D physics sphere showcasing my engineering toolbox. Drag to rotate and explore.",
-      skillsFilterAll: "All",
-      skillsFilterMobile: "Mobile & Flutter",
-      skillsFilterDesign: "UI/UX & Design",
-      skillsFilterBackend: "Backend & Cloud",
-      skillsFilterTools: "Tools & Architecture",
-      sphereHint: "Drag or swipe to rotate 3D skills sphere",
-      marqueeHeading: "Additional technologies & tools I work with daily",
-      educationBadge: "Credentials",
-      educationTitle: "Education & Certifications",
-      educationSubtitle: "Solid academic software foundation paired with current industry AI accreditations.",
-      viewCertBtn: "Verify Credential",
-      contactBadge: "Start a Conversation",
-      contactTitle: "Let's build something enduring",
-      contactSubtitle: "Have a new mobile product in mind or looking for an engineer who cares deeply about UX? Let's connect.",
-      contactDirectHeading: "Direct Channels",
-      contactDirectDesc: "I am always open to discussing new mobile applications, engineering challenges, or design partnerships.",
-      contactWhatsappTitle: "WhatsApp Chat",
-      contactWhatsappSub: "Instant & direct chat",
-      contactPhoneTitle: "Phone Call",
-      contactPhoneSub: "Available via mobile",
-      contactEmailTitle: "Email Address",
-      contactEmailSub: "Click to copy email",
-      copiedToastPhone: "Phone number copied to clipboard!",
-      contactAvailability: "Fast Response • Riyadh (UTC+3)",
-      copyEmail: "Copy Email Address",
-      copiedToast: "Email address copied to clipboard!",
-      formNamePlaceholder: "Your Name",
-      formEmailPlaceholder: "Your Email Address",
-      formMsgPlaceholder: "Tell me about your project, timeline, or inquiry...",
-      formSubmitBtn: "Send Message",
-      formSending: "Sending...",
-      formSuccess: "Message received! I'll get back to you shortly.",
-      formError: "Submission failed. Please reach out directly via email.",
-      rightsReserved: "All rights reserved.",
-      backToTop: "Back to top"
+    role: {
+      ar: "صمّمت وطوّرت تطبيق المشتريات وتطبيق السائقين باستخدام Flutter، وعملت أيضًا على متجر الويب ولوحة التحكم والأنظمة الخلفية. أكثر ما أعتز به هو مسار تأكيد التسليم الذي يتيح للسائق توثيق تسليم الطلب بصورة.",
+      en: "I designed and built the buyer and driver apps in Flutter and contributed to the web store, dashboard, and backend. I’m especially proud of the flow that lets drivers confirm delivery with a photo."
+    },
+    overview: {
+      ar: "تستخدم المطاعم والفنادق ومتاجر التجزئة توريد بلس لطلب عروض أسعار الجملة، ومتابعة الشحنات وإدارة الفواتير. تتوزّع رحلة الطلب بين تطبيق المشتريات وتطبيق السائقين ومتجر الويب.",
+      en: "Restaurants, hotels, and retailers use TawreedPlus to compare wholesale quotes, track shipments, and manage invoices. The experience spans a buyer app, a driver app, and a web store."
+    },
+    platforms: ["tawreedplus", "tawreedplus-driver", "tawreedplus-web"],
+    platformName: { ar: "تطبيق المشتريات", en: "Buyer app" },
+    platformSummary: {
+      ar: "مقارنة عروض أسعار المورّدين، وجدولة الشحنات ومتابعتها، وإدارة المشتريات عبر لوحة التحليلات.",
+      en: "Compare supplier quotes, schedule and track shipments, and review purchases through the analytics dashboard."
+    },
+    artwork: [
+      { image: "tawreed-app-2", width: 810, height: 1635, style: "phone work-image--leading" },
+      { image: "tawreed-driver-2", width: 785, height: 1660, style: "phone work-image--trailing" }
+    ]
+  },
+  qaaf: {
+    name: { ar: "قاف", en: "Qaaf" },
+    type: { ar: "تطبيق جوال · وسائط رقمية", en: "Mobile app · Digital media" },
+    summary: {
+      ar: "تطبيق للمحتوى القرآني يتيح الاستماع دون اتصال وتكرار الآيات للحفظ.",
+      en: "A Quranic media app with offline listening and verse repeat for memorization."
+    },
+    role: {
+      ar: "طوّرت تطبيق قاف باستخدام Flutter. أكثر ما أعتز به هو ميزة تكرار الآيات لتسهيل الحفظ، إلى جانب تشغيل الصوت في الخلفية وتنزيل السور للاستماع دون اتصال.",
+      en: "I built Qaaf in Flutter. I’m especially proud of the verse repeat feature for memorization, along with background playback and surah downloads for offline listening."
+    },
+    overview: {
+      ar: "يجمع قاف المحتوى القرآني الصوتي والمرئي في تطبيق واحد، مع قوائم تشغيل مخصّصة وأدوات تساعد المستخدم على الاستماع والمراجعة.",
+      en: "Qaaf brings Quranic audio and video into one app, with personal playlists and tools for listening and practice."
+    },
+    approach: {
+      ar: "يستمر تشغيل الصوت في الخلفية، ويمكن تنزيل السور للاستماع دون اتصال وتكرار الآيات أثناء الحفظ. يعتمد التطبيق على Flutter وBLoC لإدارة الحالة.",
+      en: "Audio continues in the background. Listeners can download surahs for offline use and repeat individual verses for memorization. The app uses Flutter and BLoC for state management."
+    },
+    artwork: [
+      { image: "qaaf-browse", width: 650, height: 1322, style: "phone work-image--leading" },
+      { image: "qaaf-player", width: 650, height: 1321, style: "phone work-image--trailing" }
+    ]
+  },
+  pocketdeck: {
+    name: "PocketDeck",
+    type: { ar: "مفتوح المصدر · ويندوز والويب", en: "Open source · Windows & web" },
+    summary: {
+      ar: "لوحة تحكّم من هاتفك لاختصارات ويندوز وصوت التطبيقات وبث OBS.",
+      en: "A phone-based control surface for Windows shortcuts, per-app audio, and OBS."
+    },
+    role: {
+      ar: "عملت على PocketDeck بمفردي. صمّمت واجهة الهاتف وطوّرت تطبيق ويندوز، بما في ذلك أداة مزج الصوت التي تتيح التحكم في مستوى صوت كل تطبيق على حدة.",
+      en: "I built PocketDeck as a solo project. I designed the phone interface and developed the Windows app, including a mixer that lets users control the volume of each app independently."
+    },
+    overview: {
+      ar: "يحوّل PocketDeck الهاتف أو الجهاز اللوحي إلى لوحة تحكّم لجهاز ويندوز. يجمع اختصارات التشغيل ومزج صوت التطبيقات ومراقبة الأداء والتحكّم في بث OBS.",
+      en: "PocketDeck turns a phone or tablet into a control surface for a Windows PC. It brings shortcuts, an app-by-app audio mixer, hardware telemetry, and OBS controls into one interface."
+    },
+    approach: {
+      ar: "يُشغَّل التطبيق من جهاز ويندوز ويتصل به الهاتف عبر الشبكة المحلية. يتولّى Windows CoreAudio التحكم في الصوت، ويستخدم تكامل OBS بروتوكول WebSocket.",
+      en: "The Windows PC serves the app over the local network. Windows CoreAudio powers per-app audio controls, and the OBS integration communicates over WebSockets."
+    },
+    screenshotNote: { ar: "لقطات من التطبيق أثناء تشغيله ببيانات تجريبية.", en: "Captured from the running app with sample data." },
+    artwork: [
+      { image: "pocketdeck-deck", width: 425, height: 921, style: "leading", device: true },
+      { image: "pocketdeck-mixer", width: 430, height: 932, style: "trailing", device: true }
+    ]
+  },
+  "tawreedplus-driver": {
+    name: { ar: "توريد بلس للسائقين", en: "TawreedPlus Driver" },
+    type: { ar: "تطبيق جوال · إدارة التوصيل", en: "Mobile app · Fleet logistics" },
+    summary: {
+      ar: "توجيه الشحنات ومتابعة حالتها وتوثيق التسليم رقميًا.",
+      en: "Dispatch, multi-stop routing, shipment updates, and digital proof of delivery."
+    }
+  },
+  "tawreedplus-web": {
+    name: { ar: "متجر توريد بلس", en: "TawreedPlus Web Store" },
+    type: { ar: "متجر ويب · تجارة الجملة", en: "Web store · B2B commerce" },
+    summary: {
+      ar: "متجر جملة يدعم عروض الأسعار وخصومات الكميات بثلاث لغات.",
+      en: "A multilingual wholesale storefront with quote requests and volume pricing."
+    }
+  },
+  askurdr: {
+    name: { ar: "اسأل طبيبك", en: "AskUrDr" },
+    type: { ar: "تطبيق جوال · رعاية صحية", en: "Mobile app · Telehealth" },
+    summary: {
+      ar: "حجز المواعيد والاستشارات الطبية عن بُعد مع الدفع داخل التطبيق.",
+      en: "Appointment booking and remote consultations with in-app payments."
+    }
+  },
+  cashback: {
+    name: { ar: "كاش باك", en: "CashBack" },
+    type: { ar: "تطبيق جوال · مكافآت", en: "Mobile app · Rewards" },
+    summary: {
+      ar: "عروض المتاجر القريبة ومكافآت الاسترداد النقدي وتكامل NFC.",
+      en: "Nearby offers, cash rewards, and NFC integration."
+    }
+  },
+  makarem: {
+    name: { ar: "مكارم", en: "Makarem" },
+    type: { ar: "تطبيق جوال · عمل خيري", en: "Mobile app · Nonprofit" },
+    summary: {
+      ar: "تطبيق لعرض مشاريع الإغاثة والتبرّع ومشاركة الحملات الخيرية.",
+      en: "A charity app for discovering relief projects and sharing fundraising campaigns."
     }
   }
 };
-
-if (typeof window !== 'undefined') {
-  window.portfolioData = portfolioData;
-}
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = portfolioData;
-}

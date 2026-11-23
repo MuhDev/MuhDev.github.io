@@ -1,404 +1,158 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" data-theme="dark">
+<html lang="ar" dir="rtl" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>محمد العطاس (MuhDev) | مطور تطبيقات جوال ومصمم واجهات</title>
-  <meta name="description" content="مطور تطبيقات جوال ومصمم واجهات، متخصص في بناء تطبيقات iOS و Android عالية الأداء بـ Flutter.">
-  <meta name="keywords" content="MuhDev, Mohammed Al-Attas, محمد العطاس, Flutter Developer, UI/UX Designer, iOS, Android, السعودية, الرياض">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>محمد العطاس | تطوير تطبيقات الجوال وتصميم الواجهات</title>
+  <meta name="description" content="محمد العطاس، مطور تطبيقات جوال ومصمم واجهات وتجربة مستخدم. أعمال مختارة على iOS وAndroid والويب.">
   <meta name="author" content="Mohammed Al-Attas">
-
-  <!-- OpenGraph / Social Metadata -->
+  <link rel="canonical" href="https://muhdev.site/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="محمد العطاس (MuhDev) | مطور تطبيقات ومصمم واجهات">
-  <meta property="og:description" content="أحوّل الأفكار والتصاميم إلى تطبيقات جوال سريعة وعالية الأداء بـ Flutter وبمعمارية برمجية متقنة.">
-  <meta property="og:image" content="assets/images/myPics2.jpg">
-
-  <!-- Favicons -->
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-
-  <!-- Typography: Google Fonts Preconnect -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- FontAwesome Icons CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- Core Design System & Styles -->
-  <link rel="stylesheet" href="assets/css/tokens.css?v=20261025_04">
-  <link rel="stylesheet" href="assets/css/typography.css?v=20261025_04">
-  <link rel="stylesheet" href="assets/css/animations.css?v=20261025_04">
-  <link rel="stylesheet" href="assets/css/main.css?v=20261025_04">
+  <meta property="og:title" content="محمد العطاس | MuhDev">
+  <meta property="og:description" content="محمد العطاس، مطور تطبيقات جوال ومصمم واجهات وتجربة مستخدم. أعمال مختارة على iOS وAndroid والويب.">
+  <meta property="og:image" content="https://muhdev.site/assets/images/showcase/tawreed-web.webp">
+  <link rel="icon" href="assets/favicon.png?v=2" type="image/png" sizes="64x64">
+  <link rel="icon" href="assets/favicon.svg?v=2" type="image/svg+xml" sizes="any">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=2">
+  <script src="assets/js/theme.js?v=3"></script>
+  <link rel="stylesheet" href="assets/css/tokens.css?v=3">
+  <link rel="stylesheet" href="assets/css/typography.css?v=3">
+  <link rel="stylesheet" href="assets/css/main.css?v=7">
+  <script src="assets/js/data.js?v=8" defer></script>
+  <script src="assets/js/i18n.js?v=4" defer></script>
+  <script src="assets/js/app.js?v=7" defer></script>
 </head>
+
 <body>
-
-  <!-- Ambient Glowing Background Canvas -->
-  <div class="ambient-canvas">
-    <div class="ambient-orb ambient-orb-1"></div>
-    <div class="ambient-orb ambient-orb-2"></div>
-    <div class="ambient-orb ambient-orb-3"></div>
-  </div>
-
-  <!-- Pinned Floating Island Navigation -->
-  <header class="header-sticky">
-    <nav class="nav-island" aria-label="Main Navigation">
-      <a href="#hero" class="nav-logo btn-press" title="MuhDev | محمد العطاس">
-        <img src="assets/favicon.svg" alt="MuhDev" class="nav-logo-mark">
-        <span class="nav-logo-text">م. العطاس</span>
+  <a class="skip-link" href="#main" data-i18n="skip">انتقل إلى المحتوى</a>
+  <header class="site-header">
+    <div class="shell header-layout">
+      <a class="brand" href="#hero" >
+        <span class="brand-mark" lang="en" dir="ltr" aria-hidden="true">M<span>.</span></span>
+        <span data-i18n="name">محمد العطاس</span>
       </a>
-
-      <!-- Nav Links -->
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#hero" class="nav-link active" data-i18n="navHome">الرئيسية</a></li>
-        <li><a href="#craft" class="nav-link" data-i18n="navCraft">الحِرفية</a></li>
-        <li><a href="#projects" class="nav-link" data-i18n="navProjects">الأعمال</a></li>
-        <li><a href="#skills" class="nav-link" data-i18n="navSkills">المهارات</a></li>
-        <li><a href="#contact" class="nav-link" data-i18n="navContact">تواصل معي</a></li>
-        <li class="nav-mobile-cta">
-          <a href="#contact" class="btn-nav-cta btn-press" data-i18n="navContact">
-            <span>تواصل معي</span>
-            <i class="fas fa-paper-plane" style="font-size: 0.75rem;"></i>
-          </a>
-        </li>
-      </ul>
-
-      <!-- Nav Action Controls -->
-      <div class="nav-actions">
-        <!-- Language Switcher Pill -->
-        <button class="icon-btn lang-switch-btn btn-press" aria-label="Switch Language" title="تغيير اللغة / Switch Language">
-          <i class="fas fa-language"></i>
-          <span class="lang-switch-label">English</span>
-        </button>
-
-        <!-- Theme Toggle Button -->
-        <button class="icon-btn theme-toggle-btn btn-press" aria-label="Toggle Theme" title="تبديل المظهر / Toggle Theme">
-          <i class="fas fa-sun theme-toggle-icon"></i>
-        </button>
-
-        <!-- Quick Contact CTA -->
-        <a href="#contact" class="btn-nav-cta btn-press" data-i18n="navContact">
-          <span>تواصل معي</span>
-          <i class="fas fa-paper-plane" style="font-size: 0.75rem;"></i>
-        </a>
-
-        <!-- Mobile Menu Toggle Button -->
-        <button class="icon-btn menu-toggle btn-press" id="mobileMenuToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
-          <i class="fas fa-bars"></i>
+      <nav class="site-nav" aria-label="التنقل الرئيسي" data-i18n-label="navigation">
+        <a href="#projects"  data-i18n="navWork">الأعمال</a>
+        <a href="#craft"  data-i18n="navAbout">نبذة عني</a>
+        <a href="#contact"  data-i18n="navContact">تواصل</a>
+      </nav>
+      <div class="header-controls">
+        <button class="language-button" type="button" data-language-toggle lang="en" dir="ltr" aria-label="Switch to English">English</button>
+        <button class="theme-button" type="button" data-theme-toggle data-i18n-label="theme" aria-label="المظهر الداكن" aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true"></span>
         </button>
       </div>
-    </nav>
+    </div>
   </header>
-
-  <main>
-    <!-- ==========================================================================
-         HERO SECTION
-         ========================================================================== -->
-    <section id="hero" class="hero-section container">
-      <!-- Profile Picture Halo -->
-      <div class="hero-avatar-wrapper reveal-init">
-        <img src="assets/images/myPics2.jpg" alt="Mohammed Al-Attas" class="hero-avatar">
-      </div>
-
-      <!-- Main Headline with Kinetic Shimmer -->
-      <h1 class="hero-title display-heading reveal-init delay-100">
-        <span data-i18n-hero-intro>مرحباً، أنا</span>
-        <span class="text-shimmer">محمد العطاس</span>
-      </h1>
-
-      <!-- Role & Value Proposition Subtitle -->
-      <p class="hero-subtitle reveal-init delay-200">
-        أحوّل الأفكار والتصاميم إلى تطبيقات جوال سريعة وعالية الأداء لنظامي iOS و Android باستخدام Flutter، مع التزام بأعلى معايير المعمارية النظيفة Clean Architecture وتجربة مستخدم سلسة ومتقنة.
-      </p>
-
-      <!-- Primary Action Buttons -->
-      <div class="hero-actions reveal-init delay-300">
-        <a href="#projects" class="btn-primary btn-press" data-i18n="heroExploreBtn">
-          <span>تصفح أعمالي</span>
-          <i class="fas fa-arrow-down"></i>
-        </a>
-        <a href="#contact" class="btn-secondary btn-press" data-i18n="heroContactBtn">
-          <span>ابدأ محادثة</span>
-          <i class="fas fa-envelope"></i>
-        </a>
-        <button class="btn-secondary btn-press" id="copyEmailPill" title="نسخ البريد الإلكتروني">
-          <i class="fas fa-copy"></i>
-          <span data-i18n="copyEmail">نسخ البريد الإلكتروني</span>
-        </button>
-      </div>
-
-      <!-- Quick Metrics Telemetry Row -->
-      <div class="hero-stats-row reveal-init delay-400" id="heroStatsRow">
-        <!-- Rendered dynamically via app.js -->
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         BENTO GRID: CRAFT & PHILOSOPHY
-         ========================================================================== -->
-    <section id="craft" class="section-wrapper container">
-      <div class="section-header reveal-init">
-        <h2 class="section-title" data-i18n="craftTitle">بين دقة الكود وإتقان التجربة</h2>
-        <p class="section-description" data-i18n="craftSubtitle">
-          لا نبني مجرد تطبيقات، بل نصنع تجارب رقمية سريعة، موثوقة، ومصممة بأعلى معايير الإتقان والجودة.
-        </p>
-      </div>
-
-      <!-- Dynamic Bento Grid Container -->
-      <div class="bento-grid" id="bentoCraftGrid">
-        <!-- Rendered dynamically via app.js -->
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         FEATURED PROJECTS SHOWCASE
-         ========================================================================== -->
-    <section id="projects" class="section-wrapper container">
-      <div class="section-header reveal-init">
-        <h2 class="section-title" data-i18n="projectsTitle">مشاريع وتطبيقات مختارة</h2>
-        <p class="section-description" data-i18n="projectsSubtitle">
-          نماذج من التطبيقات المنشورة على المتاجر التي قمت بتطويرها وهندستها وفق أعلى معايير الأداء والاعتمادية.
-        </p>
-      </div>
-
-      <!-- Dynamic Projects Showcase Grid -->
-      <div class="projects-grid" id="projectsGrid">
-        <!-- Rendered dynamically via app.js -->
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SKILLS MATRIX SECTION (Interactive 3D Sphere - Inspired by pszostak.pl)
-         ========================================================================== -->
-    <section id="skills" class="section-wrapper container">
-      <div class="section-header reveal-init">
-        <h2 class="section-title" data-i18n="skillsTitle">المهارات والتقنيات</h2>
-        <p class="section-description" data-i18n="skillsSubtitle">
-          كرة تفاعلية ثلاثية الأبعاد تعرض التقنيات والأدوات التي أعتمد عليها في بناء المشاريع. اسحب الكرة واستكشف التفاصيل.
-        </p>
-      </div>
-
-      <!-- Filter Controls -->
-      <div class="skills-filter-nav reveal-init delay-100" id="skillsFilterNav">
-        <button class="skills-filter-btn active" data-filter="all" data-i18n="skillsFilterAll">الكل</button>
-        <button class="skills-filter-btn" data-filter="mobile" data-i18n="skillsFilterMobile">تطوير الجوال</button>
-        <button class="skills-filter-btn" data-filter="design" data-i18n="skillsFilterDesign">تصميم الواجهات</button>
-        <button class="skills-filter-btn" data-filter="backend" data-i18n="skillsFilterBackend">السحابة والباك إند</button>
-        <button class="skills-filter-btn" data-filter="tools" data-i18n="skillsFilterTools">الأدوات والمعمارية</button>
-      </div>
-
-      <!-- 3D Fibonacci Sphere Arena -->
-      <div class="skills-sphere-wrapper reveal-init delay-200">
-        <div class="skills-sphere-container" id="skillsSphereContainer">
-          <canvas class="skills-wireframe-canvas" id="skillsWireframeCanvas"></canvas>
-          <div class="skills-sphere-stage" id="skillsSphereStage">
-            <!-- 3D Nodes injected dynamically via skills-sphere.js -->
-          </div>
-        </div>
-
-        <!-- Interactive Drag Hint -->
-        <div class="sphere-hint-pill">
-          <i class="fas fa-arrows-spin"></i>
-          <span data-i18n="sphereHint">اسحب لتدوير كرة المهارات واستكشف التقنيات</span>
+  <main id="main" tabindex="-1">
+    <section class="hero shell" id="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title" data-i18n="heroTitle">أصمّم تطبيقات الجوال وأطوّرها.</h1>
+        <p data-i18n="heroDescription">أنا محمد العطاس، مطوّر تطبيقات جوال ومصمّم واجهات وتجربة مستخدم. أبني منتجات لنظامَي iOS وAndroid، من تصميم التجربة إلى إطلاق التطبيق.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects"><span data-i18n="viewWork">استعرض أعمالي</span><span class="arrow arrow-down" aria-hidden="true"></span></a>
+          <a class="button button-outline" href="#contact" data-i18n="getInTouch">تواصل معي</a>
         </div>
       </div>
-
-      <!-- Infinite Moving Marquee Ticker -->
-      <div class="skills-marquee-section reveal-init delay-300">
-        <div class="skills-marquee-track" id="skillsMarqueeTrack">
-          <!-- Marquee tech badges injected dynamically via skills-sphere.js -->
+      <a class="hero-project" href="project.html?id=tawreedplus" data-project-link="tawreedplus">
+        <div class="hero-art" aria-hidden="true">
+          <img class="hero-desktop" src="assets/images/showcase/tawreed-web.webp" width="1280" height="720" alt="" fetchpriority="high">
+          <img class="hero-phone" src="assets/images/showcase/tawreed-app-2.webp" width="810" height="1635" alt="" fetchpriority="high">
         </div>
-      </div>
+        <div class="hero-caption">
+          <div><strong data-i18n="tawreedName">توريد بلس</strong><span data-i18n="tawreedCaption">منصة مشتريات للمنشآت</span></div>
+          <span class="round-arrow"><span class="arrow arrow-inline" aria-hidden="true"></span></span>
+        </div>
+      </a>
     </section>
 
-    <!-- ==========================================================================
-         CONTACT SECTION & FORMSPREE
-         ========================================================================== -->
-    <section id="contact" class="section-wrapper container">
-      <div class="section-header reveal-init">
-        <h2 class="section-title" data-i18n="contactTitle">جاهز لإطلاق مشروعك القادم؟</h2>
-        <p class="section-description" data-i18n="contactSubtitle">
-          سواء كانت لديك فكرة تطبيق جديدة أو تبحث عن مهندس متمرس للانضمام لفريقك، يسعدني التحدث معك ومناقشة التفاصيل.
-        </p>
+    <section class="shell section-block" id="projects" aria-labelledby="work-title">
+      <div class="section-heading">
+        <h2 id="work-title" data-i18n="workTitle">أعمال مختارة</h2>
+        <p data-i18n="workDescription">تطبيقات جوال ومنتجات ويب وأدوات مفتوحة المصدر.</p>
       </div>
+      <div class="work-grid" id="featured-projects"></div>
+      <details class="project-archive" id="project-archive">
+        <summary><span data-i18n="archive">المزيد من المشاريع</span><span class="disclosure-icon" aria-hidden="true"></span></summary>
+        <ul class="archive-list" id="archive-list"></ul>
+      </details>
+      <noscript>
+        <ul>
+          <li><a href="https://play.google.com/store/apps/details?id=com.tawreedplus.store">توريد بلس</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=com.cliffex.qaaf&amp;hl=ar">قاف</a></li>
+          <li><a href="https://github.com/MuhDev/pocketdeck" dir="ltr" lang="en">PocketDeck</a></li>
+        </ul>
+      </noscript>
+    </section>
 
-      <div class="contact-container">
-        <!-- Left / Contact Direct Channels Card -->
-        <div class="contact-info-card glass-panel reveal-init delay-100">
+    <section class="shell section-block about" id="craft" aria-labelledby="about-title">
+      <div class="section-heading">
+        <h2 id="about-title" data-i18n="aboutTitle">نبذة عني</h2>
+      </div>
+      <div class="about-layout">
+        <div class="about-bio">
+          <img class="portrait" src="assets/images/about-portrait.webp" width="512" height="512" alt="" loading="lazy">
           <div>
-            <div class="contact-info-header">
-              <div class="bento-icon-badge">
-                <i class="fas fa-comments"></i>
-              </div>
-              <h3 class="bento-card-title" data-i18n="contactDirectHeading">قنوات التواصل المباشر</h3>
-              <p class="bento-card-text" data-i18n="contactDirectDesc">
-                متاح دائماً لمناقشة أفكار وتطبيقات جديدة وتقديم حلول تقنية وتصميمية متكاملة.
-              </p>
-            </div>
-
-            <!-- Direct Contact Channels List -->
-            <div class="contact-channels-list">
-              <!-- WhatsApp Direct Card -->
-              <a href="https://wa.me/966534954757" target="_blank" rel="noopener noreferrer" class="contact-channel-item whatsapp-channel btn-press">
-                <div class="channel-icon-wrap whatsapp-badge">
-                  <i class="fab fa-whatsapp"></i>
-                </div>
-                <div class="channel-details">
-                  <span class="channel-label" data-i18n="contactWhatsappTitle">محادثة واتساب</span>
-                  <span class="channel-value text-mono">+966 53 495 4757</span>
-                </div>
-                <div class="channel-action-badge whatsapp-action">
-                  <span data-i18n="contactWhatsappSub">رد سريع ومباشر</span>
-                  <i class="fas fa-arrow-up-right-from-square"></i>
-                </div>
-              </a>
-
-              <!-- Phone Call Card -->
-              <a href="tel:+966534954757" class="contact-channel-item phone-channel btn-press">
-                <div class="channel-icon-wrap phone-badge">
-                  <i class="fas fa-phone"></i>
-                </div>
-                <div class="channel-details">
-                  <span class="channel-label" data-i18n="contactPhoneTitle">اتصال هاتفي</span>
-                  <span class="channel-value text-mono">+966 53 495 4757</span>
-                </div>
-                <div class="channel-action-badge phone-action">
-                  <span data-i18n="contactPhoneSub">متاح للمكالمات</span>
-                  <i class="fas fa-phone-volume"></i>
-                </div>
-              </a>
-
-              <!-- Copy Email Card -->
-              <div class="contact-channel-item email-channel btn-press" id="copyEmailContact" role="button" tabindex="0">
-                <div class="channel-icon-wrap email-badge">
-                  <i class="fas fa-envelope"></i>
-                </div>
-                <div class="channel-details">
-                  <span class="channel-label" data-i18n="contactEmailTitle">البريد الإلكتروني</span>
-                  <span class="channel-value text-mono">muh.ata.dev@gmail.com</span>
-                </div>
-                <div class="channel-action-badge email-action">
-                  <span data-i18n="contactEmailSub">انقر لنسخ البريد</span>
-                  <i class="fas fa-copy"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Bottom Footer of Info Card: Social Links -->
-          <div class="contact-card-footer">
-            <span class="contact-social-label text-mono" style="font-size: var(--font-size-xs); color: var(--text-muted);">Connect with me:</span>
-
-            <!-- Social Links Dock -->
-            <div class="social-dock">
-              <a href="https://wa.me/966534954757" target="_blank" rel="noopener noreferrer" class="social-dock-btn whatsapp-hover" aria-label="WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/mohammed-al-attas-09416a234/" target="_blank" rel="noopener noreferrer" class="social-dock-btn" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a href="https://github.com/MuhDev" target="_blank" rel="noopener noreferrer" class="social-dock-btn" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="mailto:muh.ata.dev@gmail.com" class="social-dock-btn" aria-label="Email">
-                <i class="fas fa-envelope"></i>
-              </a>
-            </div>
+            <p class="about-lead" data-i18n="aboutLead">أصمّم تجربة التطبيق وأبنيها بـ Flutter.</p>
+            <p data-i18n="aboutCopy">أبدأ من فهم ما يحتاجه المستخدم، ثم أصمّم الواجهات وأطوّر التطبيق. عملت على منتجات في التوريد والمحتوى الرقمي والرعاية الصحية، وعلى تكاملات مثل الدفع الإلكتروني والعمل دون اتصال.</p>
           </div>
         </div>
-
-        <!-- Right / Formspree AJAX Form -->
-        <div class="contact-form-card glass-panel reveal-init delay-200">
-          <form class="contact-form" id="contactForm" action="https://formspree.io/f/xaqenjnp" method="POST">
-            <div class="form-group">
-              <label class="form-label" for="formName" data-i18n="formNamePlaceholder">الاسم الكريم</label>
-              <div class="form-input-wrap">
-                <i class="fas fa-user input-icon"></i>
-                <input type="text" id="formName" name="name" class="form-input" placeholder="الاسم الكريم" data-i18n-placeholder="formNamePlaceholder" required>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="formEmail" data-i18n="formEmailPlaceholder">البريد الإلكتروني</label>
-              <div class="form-input-wrap">
-                <i class="fas fa-envelope input-icon"></i>
-                <input type="email" id="formEmail" name="email" class="form-input" placeholder="البريد الإلكتروني" data-i18n-placeholder="formEmailPlaceholder" required>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="formMessage" data-i18n="formMsgPlaceholder">الرسالة</label>
-              <div class="form-input-wrap">
-                <textarea id="formMessage" name="message" class="form-textarea" placeholder="أخبرني عن مشروعك، فكرتك، أو استفسارك..." data-i18n-placeholder="formMsgPlaceholder" required></textarea>
-              </div>
-            </div>
-
-            <button type="submit" class="btn-submit btn-press">
-              <i class="fas fa-paper-plane"></i>
-              <span data-i18n="formSubmitBtn">إرسال الرسالة</span>
-            </button>
-          </form>
+        <div id="skills" class="skills">
+          <h3 data-i18n="skillsTitle">مجالات العمل</h3>
+          <dl class="skill-list" id="skill-list"></dl>
+          <details class="credentials">
+            <summary><span data-i18n="credentials">التعليم والشهادات</span><span class="disclosure-icon" aria-hidden="true"></span></summary>
+            <ul class="credential-list" id="credential-list"></ul>
+          </details>
         </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="shell contact-layout">
+        <div>
+          <h2 id="contact-title" data-i18n="contactTitle">لنتحدث عن مشروعك أو فريقك.</h2>
+          <p class="contact-description" data-i18n="contactDescription">متاح للعمل على مشاريع مستقلة وفرص ضمن فرق تطوير المنتجات.</p>
+          <div class="email-line">
+            <a class="email-link" href="mailto:muh.ata.dev@gmail.com" dir="ltr">muh.ata.dev@gmail.com</a>
+            <button class="copy-button" type="button" id="copy-email" data-i18n="copyEmail" data-i18n-label="copyEmailLabel">نسخ</button>
+          </div>
+          <p id="copy-status" class="feedback" role="status"></p>
+          <div class="contact-links">
+            <a href="https://wa.me/966534954757" data-i18n="whatsapp">واتساب</a>
+            <a href="tel:+966534954757" data-i18n="phone">اتصال</a>
+            <a href="https://www.linkedin.com/in/mohammed-al-attas-09416a234/" dir="ltr" lang="en">LinkedIn</a>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/xaqenjnp" method="post">
+          <div class="form-field">
+            <label for="form-name" data-i18n="formName">اسمك</label>
+            <input type="text" id="form-name" name="name" dir="auto" autocomplete="name" required>
+          </div>
+          <div class="form-field">
+            <label for="form-email" data-i18n="formEmail">البريد الإلكتروني</label>
+            <input type="email" id="form-email" name="email" dir="ltr" autocomplete="email" required>
+          </div>
+          <div class="form-field">
+            <label for="form-message" data-i18n="formMessage">رسالتك</label>
+            <textarea id="form-message" name="message" dir="auto" rows="4" required></textarea>
+          </div>
+          <button class="button button-primary" id="contact-submit" type="submit"><span data-i18n="formSend" id="submit-label">أرسل الرسالة</span><span class="arrow arrow-inline" aria-hidden="true"></span></button>
+          <p id="form-status" class="feedback" role="status"></p>
+        </form>
       </div>
     </section>
   </main>
 
-  <!-- ==========================================================================
-       FOOTER
-       ========================================================================== -->
-  <footer class="footer">
-    <div class="container footer-content">
-      <div class="footer-text">
-        <span>© 2026 محمد العطاس (MuhDev). </span>
-        <span data-i18n="rightsReserved">جميع الحقوق محفوظة.</span>
+  <footer class="site-footer">
+    <div class="shell footer-layout">
+      <span>© 2026 <span data-i18n="name">محمد العطاس</span></span>
+      <div class="footer-links">
+        <a href="https://github.com/MuhDev" lang="en" dir="ltr">GitHub</a>
+        <a href="https://www.linkedin.com/in/mohammed-al-attas-09416a234/" lang="en" dir="ltr">LinkedIn</a>
+        <a href="#hero" data-i18n="backToTop">العودة للأعلى</a>
       </div>
-      <a href="#hero" class="btn-secondary btn-press" style="padding:8px 16px; font-size:var(--font-size-xs);" data-i18n="backToTop">
-        <i class="fas fa-arrow-up"></i>
-        <span>للأعلى</span>
-      </a>
     </div>
   </footer>
-
-  <!-- ==========================================================================
-       PROJECT CASE-STUDY MODAL DIALOG
-       ========================================================================== -->
-  <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalProjectTitle">
-    <div class="modal-dialog" id="projectModalDialog">
-      <button class="modal-close-btn" id="projectModalClose" aria-label="Close Case Study">
-        <i class="fas fa-xmark"></i>
-      </button>
-
-      <div class="modal-body">
-        <div style="display:flex; align-items:center; gap:16px; margin-bottom:16px;">
-          <img src="" alt="" id="modalProjectLogo" style="width:52px; height:52px; border-radius:12px; object-fit:cover; border:1px solid var(--border-subtle);">
-          <div>
-            <h2 id="modalProjectTitle" style="font-size:var(--font-size-2xl); font-weight:var(--weight-bold);"></h2>
-          </div>
-        </div>
-
-        <p id="modalProjectDesc" style="color:var(--text-secondary); line-height:var(--leading-relaxed); margin-bottom:20px; font-size:var(--font-size-base);"></p>
-
-        <!-- Project Tags -->
-        <div id="modalProjectTags" style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px;"></div>
-
-        <!-- Screenshots Gallery -->
-        <div id="modalProjectGallery" class="modal-gallery"></div>
-
-        <!-- Store & Repo Links -->
-        <div id="modalProjectActions" style="display:flex; flex-wrap:wrap; gap:12px; margin-top:20px;"></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Scripts -->
-  <script src="assets/js/data.js?v=20261025_03"></script>
-  <script src="assets/js/i18n.js?v=20261025_03"></script>
-  <script src="assets/js/theme.js?v=20261025_03"></script>
-  <script src="assets/js/modal.js?v=20261025_03"></script>
-  <script src="assets/js/skills-sphere.js?v=20261025_03"></script>
-  <script src="assets/js/app.js?v=20261025_03"></script>
 </body>
 </html>

@@ -1,541 +1,292 @@
-/**
- * app.js - Main Application Orchestrator
- * Dynamic rendering, Emil Kowalski micro-interactions, copy-to-clipboard toast, and Formspree AJAX.
- */
+const featuredIds = ["tawreedplus", "qaaf", "pocketdeck"];
+const skills = [
+  { label: { ar: "تطوير الجوال", en: "Mobile engineering" }, stack: "Flutter, Dart, Swift, Kotlin" },
+  { label: { ar: "تصميم المنتجات", en: "Product design" }, stack: { ar: "Figma، أنظمة التصميم، النماذج التفاعلية", en: "Figma, design systems, prototyping" } },
+  { label: { ar: "المعمارية والتكاملات", en: "Architecture and integrations" }, stack: "Clean Architecture, BLoC, Riverpod, Firebase, REST, HyperPay" }
+];
 
-const AppRenderer = {
-  renderAll() {
-    this.renderHero();
-    this.renderBentoCraft();
-    this.renderProjects();
-    this.renderSkills();
-  },
+function escapeHtml(value) {
+  const entities = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" };
+  return value.replace(/[&<>"']/g, (character) => entities[character]);
+}
 
-  getLang() {
-    return window.I18n ? window.I18n.getLang() : 'ar';
-  },
+function arrow() {
+  return '<span class="round-arrow" aria-hidden="true"><span class="arrow arrow-inline"></span></span>';
+}
 
-  resolveImageUrl(url) {
-    if (!url) return '';
-    const driveMatch = url.match(/\/file\/d\/([a-zA-Z0-9_-]+)/) || url.match(/[?&]id=([a-zA-Z0-9_-]+)/);
-    if (driveMatch && driveMatch[1]) {
-      return `https://lh3.googleusercontent.com/d/${driveMatch[1]}`;
-    }
-    return url;
-  },
+function renderDeviceFrame(screen, className = "device-frame") {
+  return `<span class="${className}">${screen}</span>`;
+}
 
-  renderHero() {
-    const lang = this.getLang();
-    const profile = portfolioData.profile;
+function renderArtwork(id) {
+  const images = projectPresentation[id].artwork.map(({ image, width, height, style, device }) => {
+    const imageClass = device ? "device-screen" : `work-image work-image--${style}`;
+    const imageTag = `<img class="${imageClass}" src="assets/images/showcase/${image}.webp"
+      width="${width}" height="${height}" alt="" loading="lazy">`;
+    return device ? renderDeviceFrame(imageTag, `device-frame work-device work-device--${style}`) : imageTag;
+  }).join("");
 
-    // Hero intro
-    const introEl = document.querySelector('[data-i18n-hero-intro]');
-    if (introEl) introEl.textContent = lang === 'ar' ? 'مرحباً، أنا ' : "Hi, I'm ";
+  return `<div class="work-art work-art--${id}" aria-hidden="true">${images}</div>`;
+}
 
-    // Hero name
-    const nameEl = document.querySelector('.text-shimmer');
-    if (nameEl) nameEl.textContent = profile.name[lang];
+function renderWork() {
+  const featured = document.getElementById("featured-projects");
 
-    // Hero subtitle
-    const subEl = document.querySelector('.hero-subtitle');
-    if (subEl) subEl.textContent = profile.bio[lang];
+  featured.innerHTML = featuredIds.map((id) => {
+    const { name, type, summary } = projectPresentation[id];
 
-    // Nav Logo text
-    const logoText = document.querySelector('.nav-logo-text');
-    if (logoText) logoText.textContent = lang === 'ar' ? 'م. العطاس' : 'M. Al-Attas';
-
-    // Render Stats
-    const statsContainer = document.getElementById('heroStatsRow');
-    if (statsContainer) {
-      statsContainer.innerHTML = profile.stats.map(s => `
-        <div class="hero-stat-card glass-panel card-hover">
-          <div class="hero-stat-value">${s.value}</div>
-          <div class="hero-stat-label">${s.label[lang]}</div>
-        </div>
-      `).join('');
-    }
-  },
-
-  renderBentoCraft() {
-    const lang = this.getLang();
-    const container = document.getElementById('bentoCraftGrid');
-    if (!container) return;
-
-    container.innerHTML = portfolioData.bentoCraft.map((item, idx) => {
-      let sizeClass = 'bento-card-medium';
-      if (item.size === 'large') sizeClass = 'bento-card-large';
-      if (item.size === 'half') sizeClass = 'bento-card-half';
-
-      return `
-        <div class="bento-card ${sizeClass} glass-panel card-hover reveal-init delay-${(idx + 1) * 100}">
-          <div>
-            <div class="bento-icon-badge">
-              <i class="${item.icon}"></i>
-            </div>
-            <h3 class="bento-card-title">${item.title[lang]}</h3>
-            <p class="bento-card-text">${item.desc[lang]}</p>
-          </div>
-          <div class="bento-tag-list">
-            ${item.tags.map(t => `<span class="bento-tag">${t}</span>`).join('')}
-          </div>
-        </div>
-      `;
-    }).join('');
-  },
-
-  renderProjects() {
-    const lang = this.getLang();
-    const container = document.getElementById('projectsGrid');
-    if (!container) return;
-
-    container.innerHTML = portfolioData.projects.map((project, idx) => {
-      const badgesHtml = project.links.map(link => {
-        let iconMarkup = '<i class="fas fa-arrow-up-right-from-square"></i>';
-        if (link.type === 'appstore') iconMarkup = '<img src="assets/svg/app-store.svg" alt="App Store">';
-        if (link.type === 'googleplay') iconMarkup = '<img src="assets/svg/google-play.svg" alt="Google Play">';
-        if (link.type === 'github') iconMarkup = '<i class="fab fa-github"></i>';
-        if (link.type === 'website') iconMarkup = '<i class="fas fa-globe"></i>';
-        if (link.type === 'uptodown') iconMarkup = '<img src="assets/svg/uptodown.svg" alt="Uptodown">';
-
-        const label = (typeof link.label === 'object' && link.label !== null)
-          ? (link.label[lang] || link.label.en || '')
-          : link.label;
-
-        return `
-          <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="store-badge btn-press">
-            ${iconMarkup}
-            <span>${label}</span>
-          </a>
-        `;
-      }).join('');
-
-      const isLandscape = project.layout === 'landscape';
-
-      return `
-        <article class="project-card glass-panel card-hover reveal-init delay-${(idx % 2 + 1) * 150} ${isLandscape ? 'project-card-landscape' : ''}">
-          <div class="project-card-header">
-            <div class="project-brand">
-              <img src="${project.logo}" alt="${project.title[lang]}" class="project-logo">
-              <div>
-                <div class="project-title-row">
-                  <h3 class="project-title">${project.title[lang]}</h3>
-                  ${project.badge ? `<span class="project-badge-pill"><i class="fas fa-code-branch"></i>${project.badge[lang]}</span>` : ''}
-                </div>
-                <span class="project-date">${project.date}</span>
-              </div>
-            </div>
-            <button class="btn-details btn-press" onclick="window.Modal.open('${project.id}')">
-              <span>${window.I18n.t('viewDetailsBtn')}</span>
-              <i class="fas fa-chevron-left" style="${lang === 'en' ? 'transform:rotate(180deg);' : ''}"></i>
-            </button>
-          </div>
-
-          ${this.renderPreviewHtml(project, lang)}
-
-          <div class="project-content">
-            <p class="project-desc">${project.description[lang]}</p>
-            <div class="project-tags">
-              ${project.tags.map(tag => `<span class="bento-tag">${tag}</span>`).join('')}
-            </div>
-            <div class="project-actions">
-              ${badgesHtml}
-            </div>
-          </div>
-        </article>
-      `;
-    }).join('');
-  },
-
-  renderPreviewHtml(project, lang) {
-    if (project.layout === 'landscape') {
-      const previews = Array.isArray(project.preview) ? project.preview : [project.preview];
-      return `
-        <div class="project-preview-wrap project-landscape-wrap" id="previewWrap_${project.id}">
-          <div class="project-landscape-showcase" onclick="window.Modal.open('${project.id}')" role="button" tabindex="0" title="${window.I18n.t('viewDetailsBtn')}">
-            <img id="landscapeImg_${project.id}" src="${this.resolveImageUrl(previews[0])}" alt="${project.title[lang]} Showcase" class="project-landscape-img" loading="lazy">
-            <div class="project-image-hover-overlay">
-              <span class="preview-open-badge">
-                <i class="fas fa-arrow-up-right-from-square"></i>
-                <span>${window.I18n.t('viewDetailsBtn')}</span>
-              </span>
-            </div>
-          </div>
-          ${previews.length > 1 ? `
-            <div class="multi-screen-indicators landscape-indicators">
-              ${previews.map((src, i) => `
-                <button class="multi-dot ${i === 0 ? 'active' : ''}" onclick="App.switchLandscapeScreen('${project.id}', '${this.resolveImageUrl(src)}', ${i}, event)" aria-label="Screen ${i + 1}"></button>
-              `).join('')}
-            </div>
-          ` : ''}
-        </div>
-      `;
-    }
-
-    if (!Array.isArray(project.preview)) {
-      return `
-        <div class="project-preview-wrap" onclick="window.Modal.open('${project.id}')" role="button" tabindex="0" title="${window.I18n.t('viewDetailsBtn')}">
-          <div class="project-image-showcase">
-            <img src="${this.resolveImageUrl(project.preview)}" alt="${project.title[lang]} Preview" class="project-showcase-img" loading="lazy">
-            <div class="project-image-hover-overlay">
-              <span class="preview-open-badge">
-                <i class="fas fa-arrow-up-right-from-square"></i>
-                <span>${window.I18n.t('viewDetailsBtn')}</span>
-              </span>
-            </div>
-          </div>
-        </div>
-      `;
-    }
-
-    const count = project.preview.length;
-
-    if (count === 2) {
-      return `
-        <div class="project-preview-wrap project-multi-wrap project-dual-wrap" id="previewWrap_${project.id}">
-          <div class="project-multi-showcase project-dual-showcase">
-            <div class="multi-screen-item screen-center" onclick="window.Modal.open('${project.id}')" title="${window.I18n.t('viewDetailsBtn')}">
-              <img src="${this.resolveImageUrl(project.preview[0])}" alt="${project.title[lang]} Screen 1" loading="lazy">
-              <div class="project-image-hover-overlay">
-                <span class="preview-open-badge">
-                  <i class="fas fa-arrow-up-right-from-square"></i>
-                  <span>${window.I18n.t('viewDetailsBtn')}</span>
-                </span>
-              </div>
-            </div>
-            <div class="multi-screen-item screen-right" onclick="App.switchProjectScreen('${project.id}', 1, event)" title="تبديل العرض">
-              <img src="${this.resolveImageUrl(project.preview[1])}" alt="${project.title[lang]} Screen 2" loading="lazy">
-            </div>
-          </div>
-          <div class="multi-screen-indicators">
-            <button class="multi-dot active" onclick="App.switchProjectScreen('${project.id}', 0, event)" aria-label="Screen 1"></button>
-            <button class="multi-dot" onclick="App.switchProjectScreen('${project.id}', 1, event)" aria-label="Screen 2"></button>
-          </div>
-        </div>
-      `;
-    }
-
-    // 3 or more screens
     return `
-      <div class="project-preview-wrap project-multi-wrap" id="previewWrap_${project.id}">
-        <div class="project-multi-showcase">
-          <div class="multi-screen-item screen-left" onclick="App.switchProjectScreen('${project.id}', 1, event)" title="تبديل العرض">
-            <img src="${this.resolveImageUrl(project.preview[1])}" alt="${project.title[lang]} Screen 2" loading="lazy">
-          </div>
-          <div class="multi-screen-item screen-center" onclick="window.Modal.open('${project.id}')" title="${window.I18n.t('viewDetailsBtn')}">
-            <img src="${this.resolveImageUrl(project.preview[0])}" alt="${project.title[lang]} Screen 1" loading="lazy">
-            <div class="project-image-hover-overlay">
-              <span class="preview-open-badge">
-                <i class="fas fa-arrow-up-right-from-square"></i>
-                <span>${window.I18n.t('viewDetailsBtn')}</span>
-              </span>
+      <article class="work-entry work-entry--${id}" data-project="${id}">
+        <a class="work-link" href="${projectUrl(id)}">
+          ${renderArtwork(id)}
+          <div class="work-info">
+            <div>
+              <h3><bdi>${escapeHtml(localize(name))}</bdi></h3>
+              <p class="work-type">${escapeHtml(localize(type))}</p>
+              <p>${escapeHtml(localize(summary))}</p>
             </div>
+            ${arrow()}
           </div>
-          <div class="multi-screen-item screen-right" onclick="App.switchProjectScreen('${project.id}', 2, event)" title="تبديل العرض">
-            <img src="${this.resolveImageUrl(project.preview[2])}" alt="${project.title[lang]} Screen 3" loading="lazy">
-          </div>
-        </div>
-        <div class="multi-screen-indicators">
-          ${project.preview.map((_, i) => `
-            <button class="multi-dot ${i === 0 ? 'active' : ''}" onclick="App.switchProjectScreen('${project.id}', ${i}, event)" aria-label="Screen ${i + 1}"></button>
-          `).join('')}
-        </div>
+        </a>
+      </article>
+    `;
+  }).join("");
+
+  const groupedIds = projectPresentation.tawreedplus.platforms;
+  const archive = portfolioData.projects.filter(({ id }) => !featuredIds.includes(id) && !groupedIds.includes(id));
+
+  document.getElementById("archive-list").innerHTML = archive.map(({ id }) => {
+    const { name, type } = projectPresentation[id];
+    return `
+      <li>
+        <a href="${projectUrl(id)}">
+          <span class="archive-title"><bdi>${escapeHtml(localize(name))}</bdi></span>
+          <span class="archive-meta">${escapeHtml(localize(type))}</span>
+        </a>
+      </li>
+    `;
+  }).join("");
+}
+
+function renderAbout() {
+  document.getElementById("skill-list").innerHTML = skills.map(({ label, stack }) => `
+    <div><dt>${escapeHtml(localize(label))}</dt><dd dir="auto">${escapeHtml(localize(stack))}</dd></div>
+  `).join("");
+
+  document.getElementById("credential-list").innerHTML = portfolioData.education.map((credential) => {
+    const title = escapeHtml(localize(credential.title));
+    const url = credential.link && escapeHtml(credential.link);
+    return `
+      <li>
+        ${url ? `<a href="${url}">${title}</a>` : `<strong>${title}</strong>`}
+        <small>${escapeHtml(localize(credential.issuer))} · <bdi>${credential.date}</bdi></small>
+      </li>
+    `;
+  }).join("");
+}
+
+function findProject(id) {
+  return portfolioData.projects.find((project) => project.id === id);
+}
+
+function renderProjectLinks(project) {
+  return `<div class="case-links">
+    ${project.links.map((link) => `
+      <a class="button button-outline case-link" href="${escapeHtml(link.url)}">
+        <bdi>${escapeHtml(localize(link.label))}</bdi>
+      </a>
+    `).join("")}
+  </div>`;
+}
+
+function renderGallery(project) {
+  const name = escapeHtml(localize(projectPresentation[project.id].name));
+  const framed = project.layout === "phone";
+  const screenshots = project.gallery.map((shot, index) => {
+    const { src, label, width, height } = typeof shot === "string" ? { src: shot } : shot;
+    const url = escapeHtml(src);
+    const caption = label ? escapeHtml(localize(label)) : "";
+    const dimensions = width && height ? ` width="${width}" height="${height}"` : "";
+    const image = `<img${framed ? ' class="device-screen"' : ""} src="${url}"${dimensions} alt="" loading="lazy">`;
+    const description = caption ? `${t("openScreenshot")} · ${caption}` : `${t("openScreenshot")} ${index + 1}`;
+
+    return `<a class="shot-link${framed ? " shot-link--device" : ""}" href="${url}" aria-label="${description} · ${name}">
+      ${framed ? renderDeviceFrame(image) : image}
+      ${caption ? `<span class="shot-caption">${caption}</span>` : ""}
+    </a>`;
+  }).join("");
+
+  const layout = framed ? " shot-grid--devices" : project.layout === "landscape" ? " shot-grid--wide" : "";
+  return `<div class="shot-grid${layout}">${screenshots}</div>`;
+}
+
+function renderCaseDetail(heading, copy) {
+  return `
+    <section class="case-detail">
+      <h2>${escapeHtml(heading)}</h2>
+      <div class="case-copy">${copy}</div>
+    </section>
+  `;
+}
+
+function renderPlatform(project) {
+  const { name, summary, platformName, platformSummary } = projectPresentation[project.id];
+  const copy = `
+    <p>${escapeHtml(localize(platformSummary || summary))}</p>
+    <div class="case-stack" dir="auto">${escapeHtml(project.tags.join(" · "))}</div>
+    ${renderProjectLinks(project)}
+  `;
+
+  return `<div class="case-platform">${renderCaseDetail(localize(platformName || name), copy)}${renderGallery(project)}</div>`;
+}
+
+function renderCaseStudy(withEntrance = false) {
+  const article = document.getElementById("case-study");
+  const id = new URLSearchParams(location.search).get("id");
+  const project = findProject(id);
+  if (!project) {
+    document.title = `${t("projectMissing")} | ${t("name")}`;
+    article.innerHTML = `
+      <div class="case-missing">
+        <h1 id="case-title">${t("projectMissing")}</h1>
+        <p>${t("projectMissingBody")}</p>
       </div>
     `;
-  },
-
-  renderSkills() {
-    if (window.SkillsSphereInstance) {
-      window.SkillsSphereInstance.setupMarquee();
-      window.SkillsSphereInstance.applyFilter();
-    }
-  },
-
-  switchProjectScreen(projectId, targetIndex, event) {
-    if (event) event.stopPropagation();
-    const wrap = document.getElementById(`previewWrap_${projectId}`);
-    if (!wrap) return;
-
-    const screens = wrap.querySelectorAll('.multi-screen-item');
-    const dots = wrap.querySelectorAll('.multi-dot');
-    if (!screens || screens.length < 2) return;
-
-    dots.forEach(d => d.classList.remove('active'));
-    if (dots[targetIndex]) dots[targetIndex].classList.add('active');
-
-    if (screens.length === 2) {
-      screens.forEach(s => s.classList.remove('screen-center', 'screen-right', 'screen-left'));
-      if (targetIndex === 0) {
-        screens[0].className = 'multi-screen-item screen-center';
-        screens[1].className = 'multi-screen-item screen-right';
-        screens[0].onclick = () => window.Modal.open(projectId);
-        screens[1].onclick = (e) => this.switchProjectScreen(projectId, 1, e);
-      } else {
-        screens[1].className = 'multi-screen-item screen-center';
-        screens[0].className = 'multi-screen-item screen-right';
-        screens[1].onclick = () => window.Modal.open(projectId);
-        screens[0].onclick = (e) => this.switchProjectScreen(projectId, 0, e);
-      }
-      return;
-    }
-
-    screens.forEach(s => s.classList.remove('screen-center', 'screen-left', 'screen-right'));
-    if (targetIndex === 0) {
-      screens[0].className = 'multi-screen-item screen-center';
-      screens[1].className = 'multi-screen-item screen-left';
-      screens[2].className = 'multi-screen-item screen-right';
-      screens[0].onclick = () => window.Modal.open(projectId);
-      screens[1].onclick = (e) => this.switchProjectScreen(projectId, 1, e);
-      screens[2].onclick = (e) => this.switchProjectScreen(projectId, 2, e);
-    } else if (targetIndex === 1) {
-      screens[1].className = 'multi-screen-item screen-center';
-      screens[0].className = 'multi-screen-item screen-left';
-      screens[2].className = 'multi-screen-item screen-right';
-      screens[1].onclick = () => window.Modal.open(projectId);
-      screens[0].onclick = (e) => this.switchProjectScreen(projectId, 0, e);
-      screens[2].onclick = (e) => this.switchProjectScreen(projectId, 2, e);
-    } else if (targetIndex === 2) {
-      screens[2].className = 'multi-screen-item screen-center';
-      screens[0].className = 'multi-screen-item screen-left';
-      screens[1].className = 'multi-screen-item screen-right';
-      screens[2].onclick = () => window.Modal.open(projectId);
-      screens[0].onclick = (e) => this.switchProjectScreen(projectId, 0, e);
-      screens[1].onclick = (e) => this.switchProjectScreen(projectId, 1, e);
-    }
-  },
-
-  switchLandscapeScreen(projectId, imgSrc, targetIndex, event) {
-    if (event) event.stopPropagation();
-    const wrap = document.getElementById(`previewWrap_${projectId}`);
-    if (!wrap) return;
-
-    const img = wrap.querySelector('.project-landscape-img');
-    const dots = wrap.querySelectorAll('.multi-dot');
-
-    if (img) {
-      img.style.opacity = '0.3';
-      img.style.transform = 'scale(0.985)';
-      setTimeout(() => {
-        img.src = imgSrc;
-        img.style.opacity = '1';
-        img.style.transform = 'scale(1)';
-      }, 150);
-    }
-
-    dots.forEach((d, i) => {
-      d.classList.toggle('active', i === targetIndex);
-    });
-  }
-};
-
-window.AppRenderer = AppRenderer;
-window.App = AppRenderer;
-
-// Initialize on DOM Ready
-document.addEventListener('DOMContentLoaded', () => {
-  // 1. Initial Render
-  AppRenderer.renderAll();
-
-  // 2. Scroll Reveal Observer
-  setupScrollReveal();
-
-  // 3. Navigation Active Pill on Scroll
-  setupActiveNav();
-
-  // 4. Mobile Menu Navigation
-  setupMobileMenu();
-
-  // 5. Email Copy to Clipboard Toast
-  setupEmailCopy();
-
-  // 6. Formspree Form AJAX Submission
-  setupContactForm();
-});
-
-function setupScrollReveal() {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('reveal-visible');
-      }
-    });
-  }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -40px 0px'
-  });
-
-  document.querySelectorAll('.reveal-init').forEach(el => observer.observe(el));
-}
-
-// Re-observe dynamic elements after language change
-document.addEventListener('languageChanged', () => {
-  setupScrollReveal();
-});
-
-function setupActiveNav() {
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
-
-  window.addEventListener('scroll', () => {
-    let currentId = '';
-    const scrollPos = window.scrollY + 120;
-
-    sections.forEach(section => {
-      const top = section.offsetTop;
-      const height = section.offsetHeight;
-      if (scrollPos >= top && scrollPos < top + height) {
-        currentId = section.getAttribute('id');
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${currentId}`) {
-        link.classList.add('active');
-      }
-    });
-  }, { passive: true });
-}
-
-function setupMobileMenu() {
-  const toggleBtn = document.getElementById('mobileMenuToggle');
-  const navLinks = document.getElementById('navLinks');
-
-  if (!toggleBtn || !navLinks) return;
-
-  const closeMenu = () => {
-    navLinks.classList.remove('mobile-open');
-    toggleBtn.setAttribute('aria-expanded', 'false');
-    toggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
-  };
-
-  const openMenu = () => {
-    navLinks.classList.add('mobile-open');
-    toggleBtn.setAttribute('aria-expanded', 'true');
-    toggleBtn.innerHTML = '<i class="fas fa-xmark"></i>';
-  };
-
-  toggleBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    const isOpen = navLinks.classList.contains('mobile-open');
-    if (isOpen) {
-      closeMenu();
-    } else {
-      openMenu();
-    }
-  });
-
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      closeMenu();
-    });
-  });
-
-  // Close when clicking outside of nav
-  document.addEventListener('click', (e) => {
-    if (navLinks.classList.contains('mobile-open') && !navLinks.contains(e.target) && !toggleBtn.contains(e.target)) {
-      closeMenu();
-    }
-  });
-
-  // Close when pressing Escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && navLinks.classList.contains('mobile-open')) {
-      closeMenu();
-    }
-  });
-}
-
-function showToast(message) {
-  let container = document.querySelector('.toast-container');
-  if (!container) {
-    container = document.createElement('div');
-    container.className = 'toast-container';
-    document.body.appendChild(container);
+    return;
   }
 
-  const toast = document.createElement('div');
-  toast.className = 'toast';
-  toast.innerHTML = `
-    <i class="fas fa-circle-check" style="color:var(--success);"></i>
-    <span>${message}</span>
-  `;
-  container.appendChild(toast);
+  const { name, type, summary, role, overview, approach, platforms, artwork, screenshotNote } = projectPresentation[id];
+  const projectName = localize(name);
+  const date = project.date.replace(' - ', ' – ').replace('Present', root.lang === 'ar' ? 'الآن' : 'Present');
+  document.title = `${projectName} | ${t("name")}`;
+  document.querySelector('meta[name="description"]').content = localize(summary);
 
-  setTimeout(() => {
-    toast.classList.add('toast-hide');
-    setTimeout(() => toast.remove(), 250);
-  }, 2800);
-}
-
-function setupEmailCopy() {
-  const copyElements = [
-    document.getElementById('copyEmailPill'),
-    document.getElementById('copyEmailContact')
-  ].filter(Boolean);
-
-  copyElements.forEach(el => {
-    el.addEventListener('click', () => {
-      const email = portfolioData.profile.contacts.email;
-      navigator.clipboard.writeText(email).then(() => {
-        const msg = window.I18n ? window.I18n.t('copiedToast') : 'Email copied to clipboard!';
-        showToast(msg);
-      }).catch(() => {
-        window.location.href = `mailto:${email}`;
-      });
-    });
-  });
-}
-
-function setupContactForm() {
-  const form = document.getElementById('contactForm');
-  if (!form) return;
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const submitBtn = form.querySelector('.btn-submit');
-    const originalText = submitBtn.innerHTML;
-    const lang = window.I18n ? window.I18n.getLang() : 'ar';
-
-    // Loading State
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = `
-      <i class="fas fa-spinner fa-spin"></i>
-      <span>${window.I18n.t('formSending')}</span>
+  const roleCopy = role ? localize(role).trim() : "";
+  const overviewCopy = `<p>${escapeHtml(localize(overview || project.description))}</p>`;
+  const detail = platforms
+    ? platforms.map(findProject).map(renderPlatform).join("")
+    : `
+      ${renderCaseDetail(t("projectApproach"), `
+        ${approach ? `<p>${escapeHtml(localize(approach))}</p>` : ""}
+        <div class="case-stack" dir="auto">${escapeHtml(project.tags.join(" · "))}</div>
+        ${renderProjectLinks(project)}
+      `)}
+      <section>
+        <h2 class="case-shot-heading">${t("projectScreens")}</h2>
+        ${screenshotNote ? `<p class="case-shot-note">${escapeHtml(localize(screenshotNote))}</p>` : ""}
+        ${renderGallery(project)}
+      </section>
     `;
-    submitBtn.style.opacity = '0.75';
 
-    const formData = new FormData(form);
+  article.classList.toggle("is-opening", withEntrance);
+  article.innerHTML = `
+    <header class="case-intro">
+      <h1 id="case-title"><bdi>${escapeHtml(projectName)}</bdi></h1>
+      <p class="case-summary">${escapeHtml(localize(summary))}</p>
+      <p class="case-meta">${escapeHtml(localize(type))} · <bdi>${escapeHtml(date)}</bdi></p>
+    </header>
+    ${roleCopy ? renderCaseDetail(t("projectRole"), `<p>${escapeHtml(roleCopy)}</p>`) : ""}
+    ${artwork ? renderArtwork(id) : ""}
+    ${renderCaseDetail(t("projectOverview"), overviewCopy)}
+    ${detail}
+  `;
+  document.getElementById("case-end").hidden = false;
+}
+
+function observeProjectArrivals() {
+  if (!("IntersectionObserver" in window)) return;
+
+  const threshold = .14;
+  const seen = new Set();
+  const observer = new IntersectionObserver((entries) => {
+    for (const { target, intersectionRatio } of entries) {
+      if (intersectionRatio < threshold || !target.isConnected) continue;
+      observer.unobserve(target);
+      seen.add(target.dataset.project);
+      target.classList.add("is-appearing");
+    }
+  }, { threshold });
+
+  function observeUnseenProjects() {
+    observer.disconnect();
+    for (const entry of document.querySelectorAll(".work-entry")) {
+      if (!seen.has(entry.dataset.project)) observer.observe(entry);
+    }
+  }
+
+  observeUnseenProjects();
+  document.addEventListener("languageChanged", observeUnseenProjects);
+}
+
+function setupContact() {
+  const form = document.getElementById("contact-form");
+  const copyButton = document.getElementById("copy-email");
+  const copyStatus = document.getElementById("copy-status");
+  const formStatus = document.getElementById("form-status");
+  const submit = document.getElementById("contact-submit");
+  const label = document.getElementById("submit-label");
+
+  function showFeedback(element, message, state) {
+    element.dataset.message = message;
+    element.dataset.state = state;
+    element.textContent = t(message);
+  }
+
+  copyButton.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(portfolioData.profile.contacts.email);
+      showFeedback(copyStatus, "copied", "success");
+    } catch {
+      showFeedback(copyStatus, "copyError", "error");
+    }
+  });
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (submit.disabled) return;
+
+    submit.disabled = true;
+    label.dataset.i18n = "formSending";
+    label.textContent = t("formSending");
+    formStatus.textContent = "";
+    delete formStatus.dataset.message;
 
     try {
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" }
       });
+      if (!response.ok) throw new Error("Contact submission failed");
 
-      if (res.ok) {
-        showToast(window.I18n.t('formSuccess'));
-        form.reset();
-        submitBtn.innerHTML = `
-          <i class="fas fa-check"></i>
-          <span>${window.I18n.t('formSuccess')}</span>
-        `;
-        submitBtn.style.background = 'var(--success)';
-        setTimeout(() => {
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = originalText;
-          submitBtn.style.background = '';
-          submitBtn.style.opacity = '1';
-        }, 3500);
-      } else {
-        throw new Error('Formspree response not ok');
-      }
-    } catch (err) {
-      showToast(window.I18n.t('formError'));
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalText;
-      submitBtn.style.opacity = '1';
+      form.reset();
+      showFeedback(formStatus, "formSuccess", "success");
+    } catch {
+      showFeedback(formStatus, "formError", "error");
+    } finally {
+      label.dataset.i18n = "formSend";
+      label.textContent = t("formSend");
+      submit.disabled = false;
     }
   });
+
+  document.addEventListener("languageChanged", () => {
+    for (const status of [copyStatus, formStatus]) {
+      if (status.dataset.message) status.textContent = t(status.dataset.message);
+    }
+  });
+}
+
+if (document.getElementById("featured-projects")) {
+  renderWork();
+  renderAbout();
+  setupContact();
+  document.addEventListener("languageChanged", () => {
+    renderWork();
+    renderAbout();
+  });
+  observeProjectArrivals();
+} else {
+  renderCaseStudy(true);
+  document.addEventListener("languageChanged", () => renderCaseStudy());
 }
