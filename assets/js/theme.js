@@ -21,9 +21,11 @@ const urlLanguage = new URL(location.href).searchParams.get("lang");
 const savedLanguage = PortfolioPreferences.read("preferred_lang");
 const isSupportedLanguage = (language) => language === "ar" || language === "en";
 
-root.lang = isSupportedLanguage(urlLanguage)
-  ? urlLanguage
-  : isSupportedLanguage(savedLanguage) ? savedLanguage : "ar";
+if (!root.dataset.caseId) {
+  root.lang = isSupportedLanguage(urlLanguage)
+    ? urlLanguage
+    : isSupportedLanguage(savedLanguage) ? savedLanguage : "ar";
+}
 root.dir = root.lang === "ar" ? "rtl" : "ltr";
 root.dataset.theme = PortfolioPreferences.read("preferred_theme") === "dark" ? "dark" : "light";
 

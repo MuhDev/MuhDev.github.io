@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-   <url>
-      <loc>https://muhdev.github.io/</loc>
-      <lastmod>2026-10-25</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>1.0</priority>
-   </url>
+  <url><loc>https://muhdev.site/</loc></url>
+  <url><loc>https://muhdev.site/work/pocketdeck-ar.html</loc></url>
+  <url><loc>https://muhdev.site/work/pocketdeck.html</loc></url>
+  <url><loc>https://muhdev.site/work/tawreedplus-ar.html</loc></url>
+  <url><loc>https://muhdev.site/work/tawreedplus.html</loc></url>
+  <url><loc>https://muhdev.site/work/tawreedplus-driver-ar.html</loc></url>
+  <url><loc>https://muhdev.site/work/tawreedplus-driver.html</loc></url>
+  <url><loc>https://muhdev.site/work/tawreedplus-web-ar.html</loc></url>
+  <url><loc>https://muhdev.site/work/tawreedplus-web.html</loc></url>
+  <url><loc>https://muhdev.site/work/qaaf-ar.html</loc></url>
+  <url><loc>https://muhdev.site/work/qaaf.html</loc></url>
+  <url><loc>https://muhdev.site/work/askurdr-ar.html</loc></url>
+  <url><loc>https://muhdev.site/work/askurdr.html</loc></url>
+  <url><loc>https://muhdev.site/work/cashback-ar.html</loc></url>
+  <url><loc>https://muhdev.site/work/cashback.html</loc></url>
+  <url><loc>https://muhdev.site/work/makarem-ar.html</loc></url>
+  <url><loc>https://muhdev.site/work/makarem.html</loc></url>
 </urlset>

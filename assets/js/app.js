@@ -142,7 +142,7 @@ function renderPlatform(project) {
 
 function renderCaseStudy(withEntrance = false) {
   const article = document.getElementById("case-study");
-  const id = new URLSearchParams(location.search).get("id");
+  const id = root.dataset.caseId;
   const project = findProject(id);
   if (!project) {
     document.title = `${t("projectMissing")} | ${t("name")}`;
@@ -286,7 +286,16 @@ if (document.getElementById("featured-projects")) {
     renderAbout();
   });
   observeProjectArrivals();
-} else {
+} else if (root.dataset.caseId) {
   renderCaseStudy(true);
-  document.addEventListener("languageChanged", () => renderCaseStudy());
+} else {
+  const id = new URLSearchParams(location.search).get("id");
+  if (findProject(id)) {
+    const target = new URL(projectUrl(id), document.baseURI);
+    target.hash = location.hash;
+    location.replace(target.href);
+  } else {
+    renderCaseStudy();
+    document.addEventListener("languageChanged", () => renderCaseStudy());
+  }
 }

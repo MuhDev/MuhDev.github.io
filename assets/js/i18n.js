@@ -109,8 +109,9 @@ function localize(value) {
   return typeof value === "string" ? value : value[root.lang];
 }
 
-function projectUrl(id) {
-  return `project.html?id=${encodeURIComponent(id)}&lang=${root.lang}`;
+function projectUrl(id, language = root.lang) {
+  const suffix = language === "ar" ? "-ar" : "";
+  return `work/${encodeURIComponent(id)}${suffix}.html`;
 }
 
 function updateLanguage() {
@@ -138,13 +139,22 @@ function updateLanguage() {
   toggle.dir = nextLanguage === "ar" ? "rtl" : "ltr";
   toggle.textContent = nextLanguage === "ar" ? "العربية" : "English";
   toggle.setAttribute("aria-label", nextLanguage === "ar" ? "التبديل إلى العربية" : "Switch to English");
-  document.title = t("homepageTitle");
+  if (!root.dataset.caseId) document.title = t("homepageTitle");
 }
 
 document.querySelector("[data-language-toggle]").addEventListener("click", () => {
-  root.lang = root.lang === "ar" ? "en" : "ar";
+  const nextLanguage = root.lang === "ar" ? "en" : "ar";
+  PortfolioPreferences.write("preferred_lang", nextLanguage);
+
+  if (root.dataset.caseId) {
+    const target = new URL(projectUrl(root.dataset.caseId, nextLanguage), document.baseURI);
+    target.hash = location.hash;
+    location.assign(target.href);
+    return;
+  }
+
+  root.lang = nextLanguage;
   root.dir = root.lang === "ar" ? "rtl" : "ltr";
-  PortfolioPreferences.write("preferred_lang", root.lang);
 
   const url = new URL(location.href);
   url.searchParams.set("lang", root.lang);
