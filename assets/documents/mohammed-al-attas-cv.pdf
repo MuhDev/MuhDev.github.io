@@ -1,138 +1,407 @@
-%PDF-1.4
-%“Œ‹ž ReportLab Generated PDF document (opensource)
+%PDF-1.3
+%âãÏÓ
 1 0 obj
 <<
-/F1 2 0 R /F2 3 0 R
+/PageMode /UseNone
+/Pages 2 0 R
+/Type /Catalog
 >>
 endobj
 2 0 obj
 <<
-/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+/Count 1
+/Kids [ 3 0 R ]
+/Type /Pages
 >>
 endobj
 3 0 obj
 <<
-/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+/Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R ]
+/Contents 12 0 R
+/MediaBox [ 0 0 595.2756 841.8898 ]
+/Parent 2 0 R
+/Resources <<
+/Font 13 0 R
+/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
 >>
 endobj
 4 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (mailto:muh.ata.dev@gmail.com)
->> /Border [ 0 0 0 ] /Rect [ 166.89 734.8898 277.63 746.8898 ] /Subtype /Link /Type /Annot
+/S /URI
+/Type /Action
+/URI (mailto\072muh\056ata\056dev\100gmail\056com)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 166.89 734.8898 277.63 746.8898 ]
+/Subtype /Link
+/Type /Annot
 >>
 endobj
 5 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (tel:+966534954757)
->> /Border [ 0 0 0 ] /Rect [ 296.91 734.8898 377.81 746.8898 ] /Subtype /Link /Type /Annot
+/S /URI
+/Type /Action
+/URI (tel\072\053966534954757)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 296.91 734.8898 377.81 746.8898 ]
+/Subtype /Link
+/Type /Annot
 >>
 endobj
 6 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://muhdev.site/)
->> /Border [ 0 0 0 ] /Rect [ 52 720.8898 105.91 732.8898 ] /Subtype /Link /Type /Annot
+/S /URI
+/Type /Action
+/URI (https\072\057\057muhdev\056site\057)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 52 720.8898 105.91 732.8898 ]
+/Subtype /Link
+/Type /Annot
 >>
 endobj
 7 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://github.com/MuhDev)
->> /Border [ 0 0 0 ] /Rect [ 125.19 720.8898 156.31 732.8898 ] /Subtype /Link /Type /Annot
+/S /URI
+/Type /Action
+/URI (https\072\057\057github\056com\057MuhDev)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 125.19 720.8898 156.31 732.8898 ]
+/Subtype /Link
+/Type /Annot
 >>
 endobj
 8 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://www.linkedin.com/in/mohammed-al-attas-09416a234/)
->> /Border [ 0 0 0 ] /Rect [ 175.59 720.8898 213.39 732.8898 ] /Subtype /Link /Type /Annot
+/S /URI
+/Type /Action
+/URI (https\072\057\057www\056linkedin\056com\057in\057mohammed\055al\055attas\05509416a234\057)
 >>
-endobj
-9 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://muhdev.site/work/tawreedplus.html)
->> /Border [ 0 0 0 ] /Rect [ 52 318.5898 119.859 331.7898 ] /Subtype /Link /Type /Annot
->>
-endobj
-10 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://muhdev.site/work/qaaf.html)
->> /Border [ 0 0 0 ] /Rect [ 52 283.1898 76.453 296.3898 ] /Subtype /Link /Type /Annot
->>
-endobj
-11 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://muhdev.site/work/pocketdeck.html)
->> /Border [ 0 0 0 ] /Rect [ 52 247.7898 114.359 260.9898 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ]
+/Rect [ 175.59 720.8898 213.39 732.8898 ]
+/Subtype /Link
+/Type /Annot
 >>
 endobj
 12 0 obj
 <<
-/Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R ] /Contents 16 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 15 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 
-  /Trans <<
-
->> /Type /Page
+/Length 5748
 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 52 767.8898 cm
+q
+.070588 .243137 .203922 rg
+BT 1 0 0 1 0 5 Tm /F2 29 Tf 34 TL (Mohammed Al-Attas) Tj T* ET
+Q
+Q
+q
+1 0 0 1 52 750.8898 cm
+q
+BT 1 0 0 1 0 5 Tm 17 TL /F2 12 Tf .12549 .145098 .121569 rg (Flutter Developer & UI/UX Designer) Tj T* ET
+Q
+Q
+q
+1 0 0 1 52 732.8898 cm
+q
+.070588 .243137 .203922 RG
+n 114.89 2.75 m 225.63 2.75 l S
+n 244.91 2.75 m 325.81 2.75 l S
+BT 1 0 0 1 0 4 Tm 14 TL /F1 10 Tf .32549 .34902 .313725 rg (Jeddah, Saudi Arabia   |   ) Tj .070588 .243137 .203922 rg (muh.ata.dev@gmail.com) Tj .32549 .34902 .313725 rg (   |   ) Tj .070588 .243137 .203922 rg (+966 53 495 4757) Tj T* ET
+Q
+Q
+q
+1 0 0 1 52 718.8898 cm
+q
+.070588 .243137 .203922 RG
+n 0 2.75 m 53.91 2.75 l S
+n 73.19 2.75 m 104.31 2.75 l S
+n 123.59 2.75 m 161.39 2.75 l S
+BT 1 0 0 1 0 4 Tm 14 TL /F1 10 Tf .070588 .243137 .203922 rg (muhdev.site) Tj .32549 .34902 .313725 rg (   |   ) Tj .070588 .243137 .203922 rg (GitHub) Tj .32549 .34902 .313725 rg (   |   ) Tj .070588 .243137 .203922 rg (LinkedIn) Tj T* ET
+Q
+Q
+q
+1 0 0 1 52 709.8898 cm
+Q
+q
+1 0 0 1 52 708.1898 cm
+q
+.7 w
+1 J
+.823529 .835294 .788235 RG
+n 0 0 m 491.2756 0 l S
+Q
+Q
+q
+1 0 0 1 52 699.1898 cm
+Q
+q
+1 0 0 1 52 667.7898 cm
+q
+.12549 .145098 .121569 rg
+BT 1 0 0 1 0 20.4 Tm /F1 11 Tf 15.7 TL (I design and build iOS and Android apps in Flutter. At QuickQuotes, I oversee an external) Tj T* (development team and work directly with customers and suppliers.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 52 639.7898 cm
+q
+.070588 .243137 .203922 rg
+BT 1 0 0 1 0 3.5 Tm /F2 12.5 Tf 16 TL (Experience) Tj T* ET
+Q
+Q
+q
+1 0 0 1 52 620.7898 cm
+q
+.12549 .145098 .121569 rg
+BT 1 0 0 1 0 3.75 Tm /F2 11.25 Tf 15 TL (Business Development | QuickQuotes) Tj T* ET
+Q
+Q
+q
+1 0 0 1 52 607.7898 cm
+q
+.32549 .34902 .313725 rg
+BT 1 0 0 1 0 3 Tm /F1 10 Tf 13 TL (2026 - Present | Joined QuickQuotes in 2025) Tj T* ET
+Q
+Q
+q
+1 0 0 1 52 575.7898 cm
+q
+BT 1 0 0 1 0 19 Tm /F1 10 Tf 12 TL .12549 .145098 .121569 rg (\177) Tj ET
+.12549 .145098 .121569 rg
+BT 1 0 0 1 11 19 Tm /F1 11 Tf 15 TL (Oversee the external development team building the platform and coordinate requirements and) Tj T* (delivery follow-ups.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 52 560.7898 cm
+q
+BT 1 0 0 1 0 4 Tm /F1 10 Tf 12 TL .12549 .145098 .121569 rg (\177) Tj ET
+.12549 .145098 .121569 rg
+BT 1 0 0 1 11 4 Tm /F1 11 Tf 15 TL (Source and meet prospective customers and suppliers, gather their needs, and follow up by email.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 52 545.7898 cm
+q
+BT 1 0 0 1 0 4 Tm /F1 10 Tf 12 TL .12549 .145098 .121569 rg (\177) Tj ET
+.12549 .145098 .121569 rg
+BT 1 0 0 1 11 4 Tm /F1 11 Tf 15 TL (Set up workflows in Zoho and use Zoho CRM to track leads and follow-ups.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 52 537.7898 cm
+Q
+q
+1 0 0 1 52 522.7898 cm
+q
+.12549 .145098 .121569 rg
+BT 1 0 0 1 0 3.75 Tm /F2 11.25 Tf 15 TL (Full-Stack Mobile Application Developer | Startup) Tj T* ET
+Q
+Q
+q
+1 0 0 1 52 509.7898 cm
+q
+.32549 .34902 .313725 rg
+BT 1 0 0 1 0 3 Tm /F1 10 Tf 13 TL (Jeddah, Saudi Arabia | Started Jan 2024) Tj T* ET
+Q
+Q
+q
+1 0 0 1 52 492.7898 cm
+q
+BT 1 0 0 1 0 4 Tm /F1 10 Tf 12 TL .12549 .145098 .121569 rg (\177) Tj ET
+.12549 .145098 .121569 rg
+BT 1 0 0 1 11 4 Tm /F1 11 Tf 15 TL (Built REST APIs and integrated them with mobile app features.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 52 477.7898 cm
+q
+BT 1 0 0 1 0 4 Tm /F1 10 Tf 12 TL .12549 .145098 .121569 rg (\177) Tj ET
+.12549 .145098 .121569 rg
+BT 1 0 0 1 11 4 Tm /F1 11 Tf 15 TL (Worked with clients to define requirements and develop iOS and Android apps.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 52 469.7898 cm
+Q
+q
+1 0 0 1 52 454.7898 cm
+q
+.12549 .145098 .121569 rg
+BT 1 0 0 1 0 3.75 Tm /F2 11.25 Tf 15 TL (Mobile Application Developer | Tx.sa) Tj T* ET
+Q
+Q
+q
+1 0 0 1 52 441.7898 cm
+q
+.32549 .34902 .313725 rg
+BT 1 0 0 1 0 3 Tm /F1 10 Tf 13 TL (Remote | Nov 2022 - Sep 2024) Tj T* ET
+Q
+Q
+q
+1 0 0 1 52 424.7898 cm
+q
+BT 1 0 0 1 0 4 Tm /F1 10 Tf 12 TL .12549 .145098 .121569 rg (\177) Tj ET
+.12549 .145098 .121569 rg
+BT 1 0 0 1 11 4 Tm /F1 11 Tf 15 TL (Developed iOS and Android applications with clients, designers, and backend developers.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 52 416.7898 cm
+Q
+q
+1 0 0 1 52 401.7898 cm
+q
+BT 1 0 0 1 0 3.75 Tm 15 TL /F2 11.25 Tf .12549 .145098 .121569 rg (Back-end & Mobile Developer | CodeEager) Tj T* ET
+Q
+Q
+q
+1 0 0 1 52 388.7898 cm
+q
+.32549 .34902 .313725 rg
+BT 1 0 0 1 0 3 Tm /F1 10 Tf 13 TL (Mukalla, Yemen | Jan 2023 - Sep 2023) Tj T* ET
+Q
+Q
+q
+1 0 0 1 52 371.7898 cm
+q
+BT 1 0 0 1 0 4 Tm /F1 10 Tf 12 TL .12549 .145098 .121569 rg (\177) Tj ET
+.12549 .145098 .121569 rg
+BT 1 0 0 1 11 4 Tm /F1 11 Tf 15 TL (Developed and debugged mobile and backend software to meet project requirements.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 52 363.7898 cm
+Q
+q
+1 0 0 1 0 134.2000 cm
+q
+1 0 0 1 52 201.5898 cm
+q
+.070588 .243137 .203922 rg
+BT 1 0 0 1 0 3.5 Tm /F2 12.5 Tf 16 TL (Skills) Tj T* ET
+Q
+Q
+q
+1 0 0 1 52 182.5898 cm
+q
+BT 1 0 0 1 0 4.4 Tm 15 TL /F2 10.6 Tf .12549 .145098 .121569 rg (Mobile & design) Tj /F1 10.6 Tf ( | Flutter, Dart, iOS, Android, REST APIs, Figma) Tj T* ET
+Q
+Q
+q
+1 0 0 1 52 167.5898 cm
+q
+BT 1 0 0 1 0 4.4 Tm 15 TL /F2 10.6 Tf .12549 .145098 .121569 rg (Business development) Tj /F1 10.6 Tf ( | B2B outreach, developer coordination, Zoho CRM) Tj T* ET
+Q
+Q
+q
+1 0 0 1 52 139.5898 cm
+q
+.070588 .243137 .203922 rg
+BT 1 0 0 1 0 3.5 Tm /F2 12.5 Tf 16 TL (Education) Tj T* ET
+Q
+Q
+q
+1 0 0 1 52 120.5898 cm
+q
+BT 1 0 0 1 0 4.4 Tm 15 TL /F2 10.6 Tf .12549 .145098 .121569 rg (Bachelor of Information Technology) Tj /F1 10.6 Tf ( | Hadhramout University, Yemen | 2022) Tj T* ET
+Q
+Q
+q
+1 0 0 1 52 92.58976 cm
+q
+.070588 .243137 .203922 rg
+BT 1 0 0 1 0 3.5 Tm /F2 12.5 Tf 16 TL (Languages) Tj T* ET
+Q
+Q
+q
+1 0 0 1 52 73.58976 cm
+q
+.12549 .145098 .121569 rg
+BT 1 0 0 1 0 4.4 Tm /F1 10.6 Tf 15 TL (Arabic and English) Tj T* ET
+Q
+Q
+ 
+
+Q
+
+endstream
 endobj
 13 0 obj
 <<
-/PageMode /UseNone /Pages 15 0 R /Type /Catalog
+/F1 14 0 R
+/F2 15 0 R
 >>
 endobj
 14 0 obj
 <<
-/Author (Mohammed Al-Attas) /CreationDate (D:20261124045203+03'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20261124045203+03'00') /Producer (ReportLab PDF Library - \(opensource\)) 
-  /Subject (Flutter development, UI/UX design, and business development) /Title (Mohammed Al-Attas | CV) /Trapped /False
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 15 0 obj
 <<
-/Count 1 /Kids [ 12 0 R ] /Type /Pages
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 16 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 2140
+/Author (Mohammed Al\055Attas)
+/CreationDate (D\07220261124045203\05303\04700\047)
+/Creator (\050unspecified\051)
+/Keywords ()
+/ModDate (D\07220261124045203\05303\04700\047)
+/Producer (ReportLab PDF Library \055 \050opensource\051)
+/Subject (Flutter development\054 UI\057UX design\054 and business development)
+/Title (Mohammed Al\055Attas \174 CV)
+/Trapped /False
 >>
-stream
-Gb!#]hc&Pn&:WfGfV]\B#+[@A8,QDtj6g<8*fr)-G5@rc8ts53EjeZ7F+8R=Eh#+BR*`s^9SOgQD!gZ"hgS`8(E@h5p-$\$:5893K*s;ci>>g\GVK%(Vo+/U#O^SHT0aBJUu.70p]M'<-Zo98*shP,b<l,K=@=SPP67?">oN3@R,R*?BOiH&G3ZsQ2<@sf&i`XINj\$2:GD\N_k2q9.t"H<p77N.c.Uq"b\:nC!>(Uo?A'Dln).,hl2!]!T#'B@[*i+ln6Xn,<6ape)n7nTHh0>u;T_Q`MG?YYh#W)mNs@\TLgiRM8jXUTT[Y=iX05D<i&LBl'"Q7H_stIQ)IJEMZS?cKN0km2`lRE^R27jt5L9GrgCV\"P43/r#/!PR*#EuJ3<8um59&AN`5,k_9aTFA,i\7D8]G=6@[5J>D7-k=gqQ6C!'UK<o"b_4YS1]Z^FRZ+K;$VWJCY9eN4@%>\;l>>[te83Lqai=>f*3OAY9u4KTMErM`md.;<gs-BMXh?QMIXRcLT6p370Jb)af&5Y-J_X*(S<c8=qXZX.8h,LBf*kRpVU@3JasW\V,]dJ/8FN%AQ3'/SBMpK^'5RN,C09ou'^_Gd[NYem'_C5-\jBGQs#,Gi3iKUIqBia=dXBFdsh5OpUX2X9=s/68SrfCUgBTI!\jB/]o-)J[uL`.0Mg=iZ@R1H.mdpR+*%<M-PZK4L9+T<H/D'/4?Sg#FJ.IKt&V?b&ADK6WqZGWPg=8Q(<FoD)?Fc@O->r`\'.+&Wa`%EI*[L-q,28:9036MfZ[-8MsO'rO#ecRQ[WBR>\@eo[mXGUCD7A43e`j[Zn`UDjGLL7I2eq#Ba\[7rVUeZM*3]TjLCG&OQ]6c0o\o&,he]CN`R3edYPf\7;B3b7/6D6pj$ZNVmZ3EEai@=ccTY`KI(%_+n2:18!4RAgu>A<RdOuPq$a+CB9.a?6OU=;jOR<ZDS>[4MY'qWL=o/ZYfjAJ[5e8mls'P6PV.K"'$)@YVBcWBUBO7S7/7'AD=,k#8<,J'a?Nu5V>HV^R8;@+J>1>kQ-?B9KN:F[W:P\"9_$+!/tTN0c4*tJ#]KR!EQ%q0A]uAJ6&<N*oB:6GZ(sMGb,4X<Q1#S.,D)`I&PKcBV:?W(MY3o!QQOJ1"T=bXetRmi(\p.At=rDd@TF^ad-f&"00^.\'j;Z3TER#p!Mq*,t5`El!Oe;QY/0+A?NnIi$L'-RB0]rZT8u6i5/T8?(haPElJL)f,*gUX:gJl?IMakN'q,X,[u^JabFgo!rQT\d2dTGD(?ILp\%fFcW&$USs6n:=3o]$NEhAMQXR8sS%:E+5]OIYLtVBR6+tl?Pm5,RHd2i[EfE])7DETh*8@foMMW(/T'I4V2qZ7ka5$qs_i<C=2262QFb6b:);j:-1>=/#4-bV#53^p=Z[RC"`4;gaH(+:Fr*bK/oQIX4Z5%pmV^LG(FC#'#C+1$#P6kPP3ng;uWQ'80$Xoj0Bkk@j:U;B=S]kLCgVt5Qr4Qu8"sQLf0TaK3aj0UP3=]K0*YPsp_<)cIT]Qdn\,D6NNNIZ9@r1jq2<CIbmgo6,^s;C(X_Nnuq<D>i;K6^?PUnbeg32Au.FkAC^iu:,_K=CQD<Tpk)Q/j;eRqgWe^92>_N:GY^m?WuXR`VI192](X"N"X**%1@<S#B!Mu]@$6D1dVE]R+28Ck/EP86"E8G$Bd;2m`2m2>mRcGqTTrF?"Fds>-,[<j2NNZ%O6fYSD+1moiSh\O5'7:oGr$:2NldY#*3+\U<I:DNT;9Dm&PC-589lCZ3sM]>[H%4R9ms)LS-_Y2:=98*f$mmVX$mg*bhO]-t-hjci=pK*b1AhRR82^>g^*80f%C"+PVDpj3S-s`fUU:HAfDZ"GsHQKp<aO.+`dnU?mqm9pSI;rq.?\7^-i#)Y6X6#hi>/,Z<nYh"`_:TgAa5'&-1_@?tHg%SXm2gY:PH;)LF&<;=kkjp%Vff<7A,n"L"B;3*_;f6Je\8,F)/Q!(43PnTfIljfJlAnLW`uZ%UKC@iKFLdD!/smm=`2Mil8Eu;ib=DV0R7mU`(rL`(-Fr(i?gLp?V::$l>]LMg_E4fBc@9R6LHYU-Pc>sh>bN(CIWO&STq7MgdV.!*m!c5@k/_#q#hFUqT(W9qubRKPEl~>endstream
 endobj
 xref
 0 17
-0000000000 65535 f 
-0000000061 00000 n 
-0000000102 00000 n 
-0000000209 00000 n 
-0000000321 00000 n 
-0000000497 00000 n 
-0000000662 00000 n 
-0000000826 00000 n 
-0000000999 00000 n 
-0000001203 00000 n 
-0000001389 00000 n 
-0000001568 00000 n 
-0000001754 00000 n 
-0000002022 00000 n 
-0000002092 00000 n 
-0000002430 00000 n 
-0000002491 00000 n 
+0000000009 65535 f 
+0000000015 00000 n 
+0000000083 00000 n 
+0000000142 00000 n 
+0000000385 00000 n 
+0000000576 00000 n 
+0000000747 00000 n 
+0000000926 00000 n 
+0000001114 00000 n 
+0000000010 00001 f 
+0000000011 00001 f 
+0000000000 00001 f 
+0000001351 00000 n 
+0000007152 00000 n 
+0000007196 00000 n 
+0000007304 00000 n 
+0000007417 00000 n 
 trailer
 <<
-/ID 
-[<6573e1b8c10003f1dc29d6fb7d0f517a><6573e1b8c10003f1dc29d6fb7d0f517a>]
-% ReportLab generated PDF document -- digest (opensource)
-
-/Info 14 0 R
-/Root 13 0 R
 /Size 17
+/Root 1 0 R
+/Info 16 0 R
+/ID [ <6573e1b8c10003f1dc29d6fb7d0f517a> <6573e1b8c10003f1dc29d6fb7d0f517a> ]
 >>
 startxref
-4723
+7805
 %%EOF
