@@ -528,6 +528,14 @@ details[open] .disclosure-icon { rotate: -135deg; }
   font-weight: 700;
 }
 
+.about-cv { margin-block-start: 1.1rem; }
+.about-cv-format {
+  display: block;
+  margin-block-start: .35rem;
+  color: var(--muted);
+  font-size: .85rem;
+}
+
 .skills h3 { font-size: 1.28rem; }
 .skill-list { margin: .8rem 0 1rem; }
 .skill-list div {
